@@ -1,15 +1,43 @@
 package by.training.task3.view;
 
+import by.training.task3.entity.Ball;
 import by.training.task3.entity.Basket;
 import by.training.task3.service.BasketService;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class BasketView {
     public void printBasketBallsOrderedByPrice(Basket basket) {
         //sort balls by price
         BasketService basketService = new BasketService();
-        basketService.sortByPrice(basket);
+        basketService.sortByBallPrice(basket);
 
         //print balls info to the console
         System.out.println(basket.toString());
+    }
+
+    public void printDuplicatedBalls(Basket basket) {
+
+        Map<Ball, Integer> map = new HashMap<>();
+
+        //creates map of duplicated balls and its quantity
+        for (Ball ball : basket.getBalls()) {
+            if (map.containsKey(ball)) {
+                int value = map.get(ball);
+                value++;
+                map.put(ball, value);
+
+            } else {
+                map.put(ball, 1);
+            }
+        }
+
+        //prints ball color and its quantity to the console
+        map.forEach((key, value) -> {
+            if (value > 1) {
+                System.out.println(key.getColor() + " ball: " + value);
+            }
+        });
     }
 }

@@ -4,9 +4,11 @@ import by.training.task3.entity.Ball;
 import by.training.task3.entity.Basket;
 
 public class BasketService {
-    public void sortByPrice(Basket basket) {
+    public void sortByBallPrice(Basket basket) {
         if (basket != null) {
             basket.getBalls().sort(Ball.priceComparator);
         }
     }
+
+
 }
