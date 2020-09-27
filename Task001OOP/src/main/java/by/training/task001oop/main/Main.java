@@ -10,11 +10,7 @@ public class Main {
 
         while (true) {
             System.out.println("Please enter number: ");
-            if (MathHelper.isNumberPerfect(scanner.nextInt())) {
-                System.out.println("true");
-            } else {
-                System.out.println("false");
-            }
+            System.out.println((MathHelper.isNumberPerfect(scanner.nextInt())));
         }
     }
 }
