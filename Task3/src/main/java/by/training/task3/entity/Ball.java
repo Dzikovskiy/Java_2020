@@ -1,7 +1,9 @@
 package by.training.task3.entity;
 
 
-public class Ball{
+import java.util.Comparator;
+
+public class Ball {
 
     private Color color;
     private int weight;
@@ -51,6 +53,13 @@ public class Ball{
         return result;
     }
 
+    public static Comparator<Ball> priceComparator = new Comparator<Ball>() {
+        @Override
+        public int compare(Ball b1, Ball b2) {
+            return (Integer.compare(b1.getPrice(), b2.getPrice()));
+        }
+    };
+
     @Override
     public String toString() {
         return "Ball{" +
@@ -59,4 +68,5 @@ public class Ball{
                 ", price=" + price +
                 '}';
     }
+
 }

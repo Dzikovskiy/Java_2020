@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class Basket {
     private ArrayList<Ball> balls;
 
+    public Basket() {
+        this.balls = new ArrayList<>();
+    }
+
     public ArrayList<Ball> getBalls() {
         return balls;
     }
@@ -24,10 +28,17 @@ public class Basket {
     public int getTotalNumberOfBallsOfColor(Color color) {
         int total = 0;
         for (Ball ball : balls) {
-            if(ball.getColor().equals(color)){
+            if (ball.getColor().equals(color)) {
                 total++;
             }
         }
         return total;
+    }
+
+    @Override
+    public String toString() {
+        return "Basket{" +
+                "balls=" + balls +
+                '}';
     }
 }
