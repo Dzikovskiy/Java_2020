@@ -9,15 +9,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BasketView {
+
+    /**
+     * This method is used to sort balls by price and print them
+     *
+     * @param basket This is the basket
+     *               Prints balls info from basket ordered by price
+     */
     public void printBasketBallsOrderedByPrice(Basket basket) {
         //sort balls by price
         BasketService basketService = new BasketService();
-        basketService.sortByBallPrice(basket);
+        basketService.sortBallByPrice(basket);
 
         //print balls info to the console
         System.out.println(basket.toString());
     }
 
+    /**
+     * This method is used to find number of duplicated balls from basket and print them
+     *
+     * @param basket This is the basket
+     *               Prints number same balls and its info
+     */
     public void printDuplicatedBalls(Basket basket) {
 
         Map<Ball, Integer> map = new HashMap<>();
@@ -42,8 +55,16 @@ public class BasketView {
         });
     }
 
+    /**
+     * This method is used to find number of baskets with the same balls number and composition
+     *
+     * @param baskets This is the array of baskets
+     *                Prints number of duplicates
+     */
     public void printDuplicatedBaskets(ArrayList<Basket> baskets) {
         Map<Basket, Integer> map = new HashMap<>();
+
+        //creates map of the same baskets and save number of them
         for (Basket basket : baskets) {
             if (map.containsKey(basket)) {
                 int value = map.get(basket);
@@ -54,11 +75,12 @@ public class BasketView {
             }
 
         }
+
+        //prints number of duplicated baskets
         map.forEach((key, value) -> {
             if (value > 1) {
                 System.out.println("duplicated baskets: " + value);
             }
         });
-
     }
 }

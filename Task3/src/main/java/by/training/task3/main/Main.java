@@ -57,7 +57,7 @@ public class Main {
         ArrayList<Ball> list3= new ArrayList<>();
         list3.add(ball);
         list3.add(ball5);
-        list3.add(ball4);
+        list3.add(ball2);
 
         basket3.setBalls(list3);
        // System.out.println(basket.equals(basket2));

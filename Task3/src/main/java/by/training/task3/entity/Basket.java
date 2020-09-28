@@ -55,8 +55,8 @@ public class Basket {
         }
 
         BasketService basketService = new BasketService();
-        basketService.sortByBallPrice(basket);
-        basketService.sortByBallWeight(basket);
+        basketService.sortBallByPrice(basket);
+        basketService.sortBallByWeight(basket);
 
         this.balls.sort(Ball.priceComparator);
         this.balls.sort(Ball.weightComparator);
