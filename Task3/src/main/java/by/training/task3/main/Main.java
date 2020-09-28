@@ -38,13 +38,37 @@ public class Main {
         ArrayList<Ball> list = new ArrayList<>();
         list.add(ball);
         list.add(ball2);
-        list.add(ball3);
-        list.add(ball4);
         list.add(ball5);
 
         basket.setBalls(list);
 
-        BasketView basketView = new BasketView();
+       BasketView basketView = new BasketView();
         basketView.printDuplicatedBalls(basket);
+
+        Basket basket2 = new Basket();
+        ArrayList<Ball> list2= new ArrayList<>();
+        list2.add(ball);
+        list2.add(ball5);
+        list2.add(ball2);
+
+        basket2.setBalls(list2);
+
+        Basket basket3 = new Basket();
+        ArrayList<Ball> list3= new ArrayList<>();
+        list3.add(ball);
+        list3.add(ball5);
+        list3.add(ball4);
+
+        basket3.setBalls(list3);
+       // System.out.println(basket.equals(basket2));
+
+        BasketView view = new BasketView();
+        ArrayList<Basket> basketArrayList = new ArrayList<>();
+        basketArrayList.add(basket);
+        basketArrayList.add(basket2);
+        basketArrayList.add(basket3);
+
+
+        view.printDuplicatedBaskets(basketArrayList);
     }
 }

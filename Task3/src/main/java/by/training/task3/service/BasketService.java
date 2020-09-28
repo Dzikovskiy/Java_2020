@@ -10,5 +10,11 @@ public class BasketService {
         }
     }
 
+    public void sortByBallWeight(Basket basket) {
+        if (basket != null) {
+            basket.getBalls().sort(Ball.weightComparator);
+        }
+    }
+
 
 }

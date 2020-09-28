@@ -60,6 +60,13 @@ public class Ball {
         }
     };
 
+    public static Comparator<Ball> weightComparator = new Comparator<Ball>() {
+        @Override
+        public int compare(Ball b1, Ball b2) {
+            return (Integer.compare(b1.getWeight(), b2.getWeight()));
+        }
+    };
+
     @Override
     public String toString() {
         return "Ball{" +

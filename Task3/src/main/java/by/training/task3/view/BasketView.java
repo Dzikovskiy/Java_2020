@@ -4,6 +4,7 @@ import by.training.task3.entity.Ball;
 import by.training.task3.entity.Basket;
 import by.training.task3.service.BasketService;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,5 +40,25 @@ public class BasketView {
                 System.out.println(key.getColor() + " ball: " + value);
             }
         });
+    }
+
+    public void printDuplicatedBaskets(ArrayList<Basket> baskets) {
+        Map<Basket, Integer> map = new HashMap<>();
+        for (Basket basket : baskets) {
+            if (map.containsKey(basket)) {
+                int value = map.get(basket);
+                value++;
+                map.put(basket, value);
+            } else {
+                map.put(basket, 1);
+            }
+
+        }
+        map.forEach((key, value) -> {
+            if (value > 1) {
+                System.out.println("duplicated baskets: " + value);
+            }
+        });
+
     }
 }

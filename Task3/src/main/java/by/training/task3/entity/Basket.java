@@ -1,5 +1,7 @@
 package by.training.task3.entity;
 
+import by.training.task3.service.BasketService;
+
 import java.util.ArrayList;
 
 public class Basket {
@@ -40,5 +42,35 @@ public class Basket {
         return "Basket{" +
                 "balls=" + balls +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Basket basket = (Basket) o;
+
+        if (basket.getBalls().size() != balls.size()) {
+            return false;
+        }
+
+        BasketService basketService = new BasketService();
+        basketService.sortByBallPrice(basket);
+        basketService.sortByBallWeight(basket);
+
+        this.balls.sort(Ball.priceComparator);
+        this.balls.sort(Ball.weightComparator);
+
+        return basket.getBalls().containsAll(balls)&& balls.containsAll(basket.getBalls());
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 1;
+
+        for (Ball ball : balls) {
+            hash = hash + ball.hashCode();
+        }
+        return hash;
     }
 }
