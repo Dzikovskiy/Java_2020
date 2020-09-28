@@ -4,11 +4,14 @@ import by.training.task3.entity.Ball;
 import by.training.task3.entity.Basket;
 import by.training.task3.entity.Color;
 import by.training.task3.view.BasketView;
+import by.training.task3.view.Menu;
 
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        Menu menu = new Menu();
+        menu.menu();
         Ball ball = new Ball();
         ball.setColor(Color.BLACK);
         ball.setPrice(10);
