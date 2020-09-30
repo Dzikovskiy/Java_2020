@@ -30,10 +30,14 @@ public class Menu {
                     addBallToTheBasket(baskets);
                     break;
                 case 3:
-                    basketView.printDuplicatedBalls(getBasketByNumberFormConsole(baskets));
+                    if (baskets.size() > 0) {
+                        basketView.printDuplicatedBalls(getBasketByNumberFormConsole(baskets));
+                    }
                     break;
                 case 4:
-                    basketView.printBasketBallsOrderedByPrice(getBasketByNumberFormConsole(baskets));
+                    if (baskets.size() > 0) {
+                        basketView.printBasketBallsOrderedByPrice(getBasketByNumberFormConsole(baskets));
+                    }
                     break;
                 case 5:
                     basketView.printDuplicatedBaskets(baskets);
@@ -41,12 +45,13 @@ public class Menu {
                 case 6:
                     return;
                 default:
-                    System.out.println("default");
+                    System.out.println("Wrong command !");
                     break;
             }
         }
     }
 
+    //return basket by number from console from arraylist
     private Basket getBasketByNumberFormConsole(ArrayList<Basket> baskets) {
         int i = 0;
         if (baskets.size() < 1) {
@@ -64,6 +69,7 @@ public class Menu {
         }
     }
 
+    // method for input ball info and adding it to the basket from array by index
     private void addBallToTheBasket(ArrayList<Basket> baskets) {
         int i = 0;
         if (baskets.size() < 1) {
@@ -96,10 +102,12 @@ public class Menu {
         }
     }
 
+    //creates basket and adding it to the arraylist
     public void createBasketAndAddToArray(ArrayList<Basket> baskets) {
         baskets.add(new Basket());
     }
 
+    //assign color from enum entered from console to the ball
     private void enterColorFromConsole(Ball ball) {
         while (!findColorInEnumAndAssignToBall(ball)) {
             System.out.println("Enter correct color");
@@ -107,6 +115,8 @@ public class Menu {
 
     }
 
+
+    //checks if color from exists in Color enum
     private boolean findColorInEnumAndAssignToBall(Ball ball) {
         String colorInput;
 
