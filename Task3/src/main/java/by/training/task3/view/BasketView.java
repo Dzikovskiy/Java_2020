@@ -80,6 +80,8 @@ public class BasketView {
         map.forEach((key, value) -> {
             if (value > 1) {
                 System.out.println("duplicated baskets: " + value);
+            } else {
+                System.out.println("No duplicated baskets");
             }
         });
     }
