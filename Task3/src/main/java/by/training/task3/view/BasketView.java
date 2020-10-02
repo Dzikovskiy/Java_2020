@@ -84,5 +84,6 @@ public class BasketView {
                 System.out.println("No duplicated baskets");
             }
         });
+
     }
 }
