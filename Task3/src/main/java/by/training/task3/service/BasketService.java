@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BasketService {
-   private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     /**
      * This method is used to sort balls inside of basket by price
@@ -60,30 +60,31 @@ public class BasketService {
         int i = 0;
         if (baskets.size() < 1) {
             System.out.println("You have 0 baskets. Please create basket first.");
-        }
-        System.out.println("Enter number of basket from 1" + " to " + baskets.size());
-        while (true) {
-            i = scanner.nextInt();
+        } else {
+            System.out.println("Enter number of basket from 1" + " to " + baskets.size());
+            while (true) {
+                i = scanner.nextInt();
 
-            if (i <= baskets.size() && i > 0) {
+                if (i <= baskets.size() && i > 0) {
 
-                Ball ball = new Ball();
+                    Ball ball = new Ball();
 
-                System.out.println("Enter price:");
-                ball.setPrice(scanner.nextInt());
-                System.out.println("Enter weight");
-                ball.setWeight(scanner.nextInt());
-                System.out.println("Enter color");
-                enterColorFromConsole(ball);
-                ArrayList<Ball> balls = baskets.get(i - 1).getBalls();
-                balls.add(ball);
-                baskets.get(i - 1).setBalls(balls);
+                    System.out.println("Enter price:");
+                    ball.setPrice(scanner.nextInt());
+                    System.out.println("Enter weight");
+                    ball.setWeight(scanner.nextInt());
+                    System.out.println("Enter color");
+                    enterColorFromConsole(ball);
+                    ArrayList<Ball> balls = baskets.get(i - 1).getBalls();
+                    balls.add(ball);
+                    baskets.get(i - 1).setBalls(balls);
 
-                System.out.println("Ball added");
+                    System.out.println("Ball added");
 
-                return;
-            } else {
-                System.out.println("Enter correct number of basket");
+                    return;
+                } else {
+                    System.out.println("Enter correct number of basket");
+                }
             }
         }
     }
@@ -109,6 +110,23 @@ public class BasketService {
             }
         }
         return false;
+    }
+
+    public int getTotalBallsWeight(ArrayList<Basket> baskets) {
+        int i = 0;
+        if (baskets.size() < 1) {
+            System.out.println("You have 0 baskets. Please create basket first.");
+        }
+        System.out.println("Enter number of basket from 1" + " to " + baskets.size());
+        while (true) {
+            i = scanner.nextInt();
+
+            if (i <= baskets.size() && i > 0) {
+                return baskets.get(i-1).getTotalBallsWeight();
+            } else {
+                System.out.println("Enter correct number of basket");
+            }
+        }
     }
 
 
