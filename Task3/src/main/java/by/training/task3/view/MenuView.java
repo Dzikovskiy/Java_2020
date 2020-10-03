@@ -18,9 +18,10 @@ public class MenuView {
             System.out.println("2. Add ball to the basket");
             System.out.println("3. Quantity of same balls in the basket");
             System.out.println("4. Weight of the balls in the basket");
-            System.out.println("5. Show balls from basket ordered by price");
-            System.out.println("6. Show number of same baskets");
-            System.out.println("7. exit");
+            System.out.println("5. Quantity of same balls by color in the basket");
+            System.out.println("6. Show balls from basket ordered by price");
+            System.out.println("7. Show number of same baskets");
+            System.out.println("8. exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -41,14 +42,17 @@ public class MenuView {
                     }
                     break;
                 case 5:
+                    basketView.printQuantityOfBallByColor(basketService.getBasketByNumberFormConsole(baskets));
+                    break;
+                case 6:
                     if (baskets.size() > 0) {
                         basketView.printBasketBallsOrderedByPrice(basketService.getBasketByNumberFormConsole(baskets));
                     }
                     break;
-                case 6:
+                case 7:
                     basketView.printDuplicatedBaskets(baskets);
                     break;
-                case 7:
+                case 8:
                     return;
                 default:
                     System.out.println("Wrong command !");

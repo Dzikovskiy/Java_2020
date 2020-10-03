@@ -85,8 +85,18 @@ public class BasketView {
 
     }
 
+    /**
+     * prints total weight of balls from basket
+     * @param baskets
+     */
     public void printTotalBallsWeight(ArrayList<Basket> baskets) {
         BasketService basketService = new BasketService();
         System.out.println("Total weight: " + basketService.getTotalBallsWeight(baskets));
+    }
+
+    public void printQuantityOfBallByColor(Basket basket) {
+        BasketService basketService = new BasketService();
+        System.out.println("Please enter color:");
+        System.out.println("Total balls: " + basketService.getQuantityOfBallByColor(basket));
     }
 }
