@@ -1,17 +1,17 @@
 package by.training.task4;
 
+import by.training.task4.entity.Array;
+import by.training.task4.service.ArrayService;
+import by.training.task4.view.ArrayView;
+
+import java.io.File;
+import java.io.IOException;
+
 public class main {
-    public static void main(String[] args) {
-        Array array = new Array(0);
-        array.add(0, 5000);
-        array.add(1, 6000);
-        array.add(2, 7000);
-        System.out.println(array);
-        int[] arr = new int[5];
-        arr[0] = 100;
-        arr[1] = 200;
-        arr[2] = 300;
-        array = new Array(arr);
-        System.out.println(array);
+    public static void main(String[] args) throws IOException {
+        ArrayService arrayService = new ArrayService();
+        Array a = new Array();
+        arrayService.fillArrayFromFile(a);
+        System.out.println(a);
     }
 }
