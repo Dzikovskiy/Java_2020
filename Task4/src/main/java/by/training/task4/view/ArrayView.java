@@ -46,7 +46,6 @@ public class ArrayView {
         }
     }
 
-
     /**
      * Method for printing index of the entered from console number in array
      *
@@ -59,5 +58,25 @@ public class ArrayView {
             index = arrayService.binarySearch(array.toArray(), scanner.nextInt(), 0, array.getLength() - 1);
         }
         System.out.print("Its index is: " + index);
+    }
+
+    /**
+     * Method for printing Array of fibonacci numbers from given Array
+     *
+     * @param array given Array
+     */
+    public void printFibFromArray(Array array) {
+        Array result = arrayService.checkFib(array.toArray());
+        System.out.println(result);
+    }
+
+    /**
+     * Method for printing Array of three digit none duplicated numbers from the given Array
+     *
+     * @param array given Array
+     */
+    public void printNoneDuplicatedThreeDigitNumbersFromArray(Array array) {
+        Array result = arrayService.getNoneDuplicatedThreeDigitNumbers(array.toArray());
+        System.out.println(result);
     }
 }

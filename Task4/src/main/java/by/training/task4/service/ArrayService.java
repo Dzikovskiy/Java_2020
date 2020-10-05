@@ -5,6 +5,8 @@ import by.training.task4.entity.Array;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -111,4 +113,62 @@ public class ArrayService {
         return index;
     }
 
+    /**
+     * Helper for checkFib
+     *
+     * @param num
+     * @return
+     */
+    private boolean isPerfectSquare(int num) {
+        int n = (int) (Math.sqrt(num));
+        return (n * n == num);
+    }
+
+    /**
+     * Method to check if the number
+     * is in Fibonacci or not
+     *
+     * @param array given array
+     * @return result array of fib numbers
+     */
+    public Array checkFib(int array[]) {
+        Array resultArray = new Array();
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (isPerfectSquare(5 * array[i] * array[i] + 4) || isPerfectSquare(5 * array[i] * array[i] - 4)) {
+                resultArray.add(array[i]);
+            }
+        }
+        return resultArray;
+    }
+
+    /**
+     * Method for getting array of three digit none duplicated numbers from the given array
+     *
+     * @param array given array
+     * @return result Array
+     */
+    public Array getNoneDuplicatedThreeDigitNumbers(int[] array) {
+        Array resultArray = new Array();
+        Map<Integer, Integer> numToCountMap = new HashMap<>();
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > 99 || array[i] < -99) {
+                Integer key = array[i];
+                if (numToCountMap.containsKey(key)) {
+                    numToCountMap.put(key, numToCountMap.get(key) + 1);
+                } else {
+                    numToCountMap.put(key, 1);
+                }
+            }
+
+        }
+
+        for (Map.Entry<Integer, Integer> entry : numToCountMap.entrySet()) {
+            if (entry.getValue() == 1) {
+                resultArray.add(entry.getKey());
+            }
+        }
+
+        return resultArray;
+    }
 }

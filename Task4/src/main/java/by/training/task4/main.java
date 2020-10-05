@@ -7,16 +7,16 @@ import by.training.task4.view.ArrayView;
 public class main {
     public static void main(String[] args) {
         Array array = new Array();
-        array.add(5);
-        array.add(10);
-        array.add(20);
-        array.add(2);
-        array.add(7);
+        array.add(100);
+        array.add(100);
+        array.add(150);
+        array.add(-160);
+        array.add(173);
+        array.add(0);
         ArrayService arrayService = new ArrayService();
-        arrayService.selectionSort(array);
-        System.out.println(array);
-        ArrayView arrayView = new ArrayView();
-        arrayView.printEnteredNumberFromArrayWithBinarySearch(array);
+       ArrayView arrayView = new ArrayView();
+       arrayView.printNoneDuplicatedThreeDigitNumbersFromArray(array);
+
 
     }
 }
