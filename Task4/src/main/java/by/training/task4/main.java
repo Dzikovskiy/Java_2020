@@ -4,14 +4,19 @@ import by.training.task4.entity.Array;
 import by.training.task4.service.ArrayService;
 import by.training.task4.view.ArrayView;
 
-import java.io.File;
-import java.io.IOException;
-
 public class main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        Array array = new Array();
+        array.add(5);
+        array.add(10);
+        array.add(20);
+        array.add(2);
+        array.add(7);
         ArrayService arrayService = new ArrayService();
-        Array a = new Array();
-        arrayService.fillArrayFromFile(a);
-        System.out.println(a);
+        arrayService.selectionSort(array);
+        System.out.println(array);
+        ArrayView arrayView = new ArrayView();
+        arrayView.printEnteredNumberFromArrayWithBinarySearch(array);
+
     }
 }

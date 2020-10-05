@@ -41,8 +41,23 @@ public class ArrayView {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] toArray = Arrays.stream(reader.readLine().split("\\s")).mapToInt(Integer::parseInt).toArray();
 
-        for (int i = 0; i < toArray.length; i++) {
-            array.add(toArray[i]);
+        for (int j : toArray) {
+            array.add(j);
         }
+    }
+
+
+    /**
+     * Method for printing index of the entered from console number in array
+     *
+     * @param array given array
+     */
+    public void printEnteredNumberFromArrayWithBinarySearch(Array array) {
+        int index = -1;
+        System.out.print("\nEnter number to search: ");
+        if (scanner.hasNextInt()) {
+            index = arrayService.binarySearch(array.toArray(), scanner.nextInt(), 0, array.getLength() - 1);
+        }
+        System.out.print("Its index is: " + index);
     }
 }

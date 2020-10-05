@@ -41,7 +41,7 @@ public class ArrayService {
             array.add(random.nextInt());
         }
     }
-    
+
     /**
      * Method for filling array from file with numbers separated with whitespaces
      *
@@ -60,4 +60,55 @@ public class ArrayService {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Method for quicksort of the given Array
+     *
+     * @param array given Array
+     */
+    public void quickSort(Array array) {
+        ArraySortService arraySortService = new ArraySortService();
+        int[] arrayToSort = array.toArray();
+        arraySortService.quickSort(arrayToSort, 0, arrayToSort.length - 1);
+    }
+
+    /**
+     * Method for insertion sort of the given Array
+     *
+     * @param array given Array
+     */
+    public void insertionSort(Array array) {
+        ArraySortService arraySortService = new ArraySortService();
+        int[] arrayToSort = array.toArray();
+        arraySortService.insertionSort(arrayToSort);
+    }
+
+    /**
+     * Method for selection sort of the given Array
+     *
+     * @param array given Array
+     */
+    public void selectionSort(Array array) {
+        ArraySortService arraySortService = new ArraySortService();
+        int[] arrayToSort = array.toArray();
+        arraySortService.selectionSort(arrayToSort);
+    }
+
+    public int binarySearch(int[] sortedArray, int key, int low, int high) {
+        int index = -1;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (sortedArray[mid] < key) {
+                low = mid + 1;
+            } else if (sortedArray[mid] > key) {
+                high = mid - 1;
+            } else if (sortedArray[mid] == key) {
+                index = mid;
+                break;
+            }
+        }
+        return index;
+    }
+
 }
