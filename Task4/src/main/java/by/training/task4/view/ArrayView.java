@@ -17,6 +17,14 @@ public class ArrayView {
         this.arrayService = new ArrayService();
     }
 
+    public void printArray(Array array){
+        System.out.print("[");
+        for (int i=0;i<array.getLength();i++){
+            System.out.print(array.get(i)+", ");
+        }
+        System.out.print("]");
+    }
+
     /**
      * Method for printing array to the console
      *

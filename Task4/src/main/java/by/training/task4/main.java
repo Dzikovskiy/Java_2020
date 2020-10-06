@@ -1,12 +1,13 @@
 package by.training.task4;
 
 import by.training.task4.entity.Array;
-import by.training.task4.service.ArrayService;
-import by.training.task4.view.ArrayView;
+import by.training.task4.entity.JaggedArray;
+import by.training.task4.view.JaggedArrayView;
 
 public class main {
     public static void main(String[] args) {
-        Array[] arrays = new Array[3];
+        JaggedArray jaggedArray = new JaggedArray();
+
         Array array = new Array();
         array.add(100);
         array.add(100);
@@ -15,12 +16,19 @@ public class main {
         array.add(173);
         array.add(0);
 
-        arrays[0]= array;
+        jaggedArray.add(array);
+        System.out.println(jaggedArray);
 
-        ArrayService arrayService = new ArrayService();
-       ArrayView arrayView = new ArrayView();
-       arrayView.printNoneDuplicatedThreeDigitNumbersFromArray(array);
+        Array array2 = new Array();
+        array2.add(2);
+        array2.add(3);
+        array2.add(4);
+        jaggedArray.add(array2);
+        System.out.println(jaggedArray);
 
+        JaggedArrayView jaggedArrayView= new JaggedArrayView();
+        jaggedArray.set(3,array);
+        jaggedArrayView.printJaggedArray(jaggedArray);
 
     }
 }
