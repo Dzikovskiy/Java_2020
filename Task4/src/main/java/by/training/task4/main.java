@@ -2,7 +2,6 @@ package by.training.task4;
 
 import by.training.task4.entity.Array;
 import by.training.task4.entity.JaggedArray;
-import by.training.task4.service.JaggedArrayService;
 import by.training.task4.view.JaggedArrayView;
 
 public class main {
@@ -32,9 +31,9 @@ public class main {
         JaggedArray jaggedArray2 = new JaggedArray();
         jaggedArray2.add(array);
         jaggedArray2.add(array2);
-        jaggedArray2.add(array);
+        jaggedArray2.add(array3);
 
-        jaggedArrayView.printSumOfArrays(jaggedArray, jaggedArray2);
+        jaggedArrayView.printSubtractionOfArrays(jaggedArray, jaggedArray2);
 
     }
 }

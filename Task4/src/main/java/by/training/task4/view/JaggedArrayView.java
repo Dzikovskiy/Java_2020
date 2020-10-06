@@ -38,4 +38,11 @@ public class JaggedArrayView {
         JaggedArray result = jaggedArrayService.sumArrays(jaggedArray1, jaggedArray2);
         printJaggedArray(result);
     }
+
+    public void printSubtractionOfArrays(JaggedArray jaggedArray1, JaggedArray jaggedArray2) {
+        JaggedArray result = jaggedArrayService.subtractArrays(jaggedArray1, jaggedArray2);
+        printJaggedArray(result);
+    }
+
+
 }

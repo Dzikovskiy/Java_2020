@@ -56,4 +56,16 @@ public class JaggedArrayService {
         }
         return result;
     }
+
+    public JaggedArray subtractArrays(JaggedArray jaggedArray1, JaggedArray jaggedArray2) {
+        JaggedArray result = new JaggedArray();
+
+        if (!compareSize(jaggedArray1, jaggedArray2)) {
+            return result;
+        }
+        for (int i = 0; i < jaggedArray1.getLength(); i++) {
+            result.add(arrayService.subtractArrays(jaggedArray1.get(i), jaggedArray2.get(i)));
+        }
+        return result;
+    }
 }
