@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class ArrayView {
     private ArrayService arrayService;
@@ -19,9 +20,7 @@ public class ArrayView {
 
     public void printArray(Array array){
         System.out.print("[");
-        for (int i=0;i<array.getLength();i++){
-            System.out.print(array.get(i)+", ");
-        }
+        IntStream.range(0, array.getLength()).mapToObj(i -> array.get(i) + ", ").forEach(System.out::print);
         System.out.print("]");
     }
 

@@ -171,4 +171,20 @@ public class ArrayService {
 
         return resultArray;
     }
+
+
+    public Array scaleArray(Array array, int scale) {
+        for (int i = 0; i < array.getLength(); i++) {
+            array.set(i, array.get(i) * scale);
+        }
+        return array;
+    }
+
+    public Array sumArrays(Array array1, Array array2) {
+        Array result = new Array();
+        for (int i = 0; i < array1.getLength(); i++) {
+            result.add(array1.get(i) + array2.get(i));
+        }
+        return result;
+    }
 }

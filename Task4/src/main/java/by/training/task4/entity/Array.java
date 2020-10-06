@@ -148,9 +148,10 @@ public class Array {
         return this.data.length;
     }
 
-    public int[] toArray(){
+    public int[] toArray() {
         return this.data;
     }
+
 
     @Override
     public String toString() {
