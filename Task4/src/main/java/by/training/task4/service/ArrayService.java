@@ -196,5 +196,32 @@ public class ArrayService {
         return result;
     }
 
+    public int getSumOfArray(Array array) {
+        int sum = 0;
+        for (int i = 0; i < array.getLength(); i++) {
+            sum += array.get(i);
+        }
+        return sum;
+    }
 
+    public int getMaxElement(Array array) {
+        int max = array.get(0);
+        for (int i = 0; i < array.getLength(); i++) {
+            if (max < array.get(i)) {
+                max = array.get(i);
+            }
+        }
+        return max;
+    }
+
+    public int getMinElement(Array array) {
+        int min = array.get(0);
+
+        for (int i = 0; i < array.getLength(); i++) {
+            if (array.get(i)<min) {
+                min = array.get(i);
+            }
+        }
+        return min;
+    }
 }

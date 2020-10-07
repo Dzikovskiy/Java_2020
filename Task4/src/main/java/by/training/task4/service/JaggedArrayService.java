@@ -68,4 +68,77 @@ public class JaggedArrayService {
         }
         return result;
     }
+
+    public void sortArrayLinesBySum(JaggedArray jaggedArray) {
+        for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arrayService.getSumOfArray(jaggedArray.get(j)) > arrayService.getSumOfArray(jaggedArray.get(j + 1))) {
+                    Array tmp = jaggedArray.get(j);
+                    jaggedArray.set(j, jaggedArray.get(j + 1));
+                    jaggedArray.set(j + 1, tmp);
+                }
+            }
+        }
+    }
+
+    public void sortArrayLinesByMaxElement(JaggedArray jaggedArray) {
+        for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arrayService.getMaxElement(jaggedArray.get(j)) > arrayService.getMaxElement(jaggedArray.get(j + 1))) {
+                    Array tmp = jaggedArray.get(j);
+                    jaggedArray.set(j, jaggedArray.get(j + 1));
+                    jaggedArray.set(j + 1, tmp);
+                }
+            }
+        }
+    }
+
+    public void sortArrayLinesByMinElement(JaggedArray jaggedArray) {
+        for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arrayService.getMinElement(jaggedArray.get(j)) > arrayService.getMinElement(jaggedArray.get(j + 1))) {
+                    Array tmp = jaggedArray.get(j);
+                    jaggedArray.set(j, jaggedArray.get(j + 1));
+                    jaggedArray.set(j + 1, tmp);
+                }
+            }
+        }
+    }
+
+    public int getMaxLinesLength(JaggedArray jaggedArray) {
+        int max = 0;
+        for (int i = 0; i < jaggedArray.getLength(); i++) {
+            if (max < jaggedArray.get(i).getLength()) {
+                max = jaggedArray.get(i).getLength();
+            }
+        }
+        return max;
+    }
+
+    public void transposeMatrix(JaggedArray jaggedArray) {
+        if (isSquareMatrix(jaggedArray)) {
+            for (int i = 0; i < jaggedArray.getLength(); i++) {
+                for (int j = i + 1; j < jaggedArray.getLength(); j++) {
+                    int temp = jaggedArray.get(i).get(j);
+
+                    //  int temp = a[i][j];
+
+                    Array a = jaggedArray.get(i);
+                    a.set(j, jaggedArray.get(j).get(i));
+
+                    jaggedArray.set(i, a);
+
+                    // a[i][j] = a[j][i];
+
+                    a = jaggedArray.get(j);
+                    a.set(i, temp);
+
+                    jaggedArray.set(j, a);
+
+                    //a[j][i] = temp;
+                }
+            }
+        }
+    }
+
 }
