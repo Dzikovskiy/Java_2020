@@ -19,7 +19,13 @@ public class MenuView {
             System.out.println("2. Create Array from file");
             System.out.println("3. Create Array from random numbers");
             System.out.println("4. Print Array");
-            System.out.println("8. exit");
+            System.out.println("5. Find number index in Array");
+            System.out.println("6. Find min number in Array");
+            System.out.println("7. Find max number in Array");
+            System.out.println("8. Quick sort Array");
+            System.out.println("9. Selection sort Array");
+            System.out.println("10. Insert sort Array");
+            System.out.println("20. exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -36,7 +42,29 @@ public class MenuView {
                 case 4:
                     arrayView.printArray(array);
                     break;
+                case 5:
+                    System.out.println("Enter number:");
+                    System.out.println("Index is:" + array.getElementIndex(scanner.nextInt()));
+                    break;
+                case 6:
+                    System.out.println("Min element: " + array.getMinValue());
+                    break;
+                case 7:
+                    System.out.println("Max element:" + array.getMaxValue());
+                    break;
                 case 8:
+                    arrayService.quickSort(array);
+                    arrayView.printArray(array);
+                    break;
+                case 9:
+                    arrayService.selectionSort(array);
+                    arrayView.printArray(array);
+                    break;
+                case 10:
+                    arrayService.insertionSort(array);
+                    arrayView.printArray(array);
+                    break;
+                case 20:
                     return;
                 default:
                     System.out.println("Wrong command !");
