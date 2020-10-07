@@ -48,4 +48,28 @@ public class JaggedArray {
                 "jaggedArray=" + Arrays.toString(jaggedArray) +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        JaggedArray that = (JaggedArray) o;
+
+        if (jaggedArray.length!=that.getLength()){
+            return false;
+        }
+
+        for (int i = 0; i < jaggedArray.length; i++) {
+            if (!jaggedArray[i].equals(that.jaggedArray[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(jaggedArray);
+    }
 }

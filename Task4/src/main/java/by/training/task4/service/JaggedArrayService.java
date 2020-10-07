@@ -138,6 +138,17 @@ public class JaggedArrayService {
                     //a[j][i] = temp;
                 }
             }
+        } else {
+
+            // 4 3 ok - 3 4
+            // 3 4  - 4 3
+//            int size = getMaxLinesLength(jaggedArray);
+//            if (size< jaggedArray.getLength()){
+//                size= jaggedArray.getLength();
+//            }else {
+//
+//            }
+
         }
     }
 
