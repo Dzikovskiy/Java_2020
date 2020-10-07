@@ -18,7 +18,7 @@ public class ArrayView {
         this.arrayService = new ArrayService();
     }
 
-    public void printArray(Array array){
+    public void printArray(Array array) {
         System.out.print("[");
         IntStream.range(0, array.getLength()).mapToObj(i -> array.get(i) + ", ").forEach(System.out::print);
         System.out.print("]");
@@ -64,7 +64,12 @@ public class ArrayView {
         if (scanner.hasNextInt()) {
             index = arrayService.binarySearch(array.toArray(), scanner.nextInt(), 0, array.getLength() - 1);
         }
-        System.out.print("Its index is: " + index);
+        if (index >= 0) {
+            System.out.print("Its index is: " + index);
+        } else {
+            System.out.println("Not found");
+        }
+
     }
 
     /**

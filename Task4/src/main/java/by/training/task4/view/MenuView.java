@@ -25,6 +25,10 @@ public class MenuView {
             System.out.println("8. Quick sort Array");
             System.out.println("9. Selection sort Array");
             System.out.println("10. Insert sort Array");
+            System.out.println("11. Binary search in Array");
+            System.out.println("12. Print prime numbers in Array");
+            System.out.println("13. Print fib numbers in Array");
+            System.out.println("14. Print three digit numbers in Array");
             System.out.println("20. exit");
 
             switch (scanner.nextInt()) {
@@ -64,6 +68,19 @@ public class MenuView {
                     arrayService.insertionSort(array);
                     arrayView.printArray(array);
                     break;
+                case 11:
+                    arrayView.printEnteredNumberFromArrayWithBinarySearch(array);
+                    break;
+                case 12:
+                    arrayView.printPrimeNumbers(array);
+                    break;
+                case 13:
+                    arrayView.printFibFromArray(array);
+                    break;
+                case 14:
+                    arrayView.printNoneDuplicatedThreeDigitNumbersFromArray(array);
+                    break;
+
                 case 20:
                     return;
                 default:

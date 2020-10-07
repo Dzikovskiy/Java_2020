@@ -152,7 +152,7 @@ public class ArrayService {
         Array resultArray = new Array();
         Map<Integer, Integer> numToCountMap = new HashMap<>();
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 99 || array[i] < -99) {
+            if (array[i] > 99 || array[i] < -99 && array[i] < 1000) {
                 Integer key = array[i];
                 if (numToCountMap.containsKey(key)) {
                     numToCountMap.put(key, numToCountMap.get(key) + 1);
@@ -218,7 +218,7 @@ public class ArrayService {
         int min = array.get(0);
 
         for (int i = 0; i < array.getLength(); i++) {
-            if (array.get(i)<min) {
+            if (array.get(i) < min) {
                 min = array.get(i);
             }
         }
