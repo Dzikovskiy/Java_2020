@@ -14,20 +14,20 @@ public class main {
         JaggedArrayService jaggedArrayService = new JaggedArrayService();
 
         Array array = new Array();
-        array.add(100);
-        array.add(7);
-        array.add(7050);
-      //  array.add(4000);
+        array.add(1);
+        array.add(2);
+        array.add(3);
+
 
         Array array2 = new Array();
+        array2.add(100);
+        array2.add(500);
+        array2.add(200);
         array2.add(400);
-        array2.add(5);
-        array2.add(2000);
-        array2.add(4000);
 
         Array array3 = new Array();
-        array3.add(200);
-        array3.add(3);
+        array3.add(1000);
+        array3.add(3000);
         array3.add(4000);
         array3.add(5000);
 
@@ -35,7 +35,6 @@ public class main {
         jaggedArray.add(array2);
         jaggedArray.add(array3);
 
-        jaggedArrayView.printJaggedArray(jaggedArray);
 
         System.out.println("");
 
@@ -44,12 +43,12 @@ public class main {
         jaggedArray2.add(array2);
         jaggedArray2.add(array3);
 
-        jaggedArrayService.transposeMatrix(jaggedArray);
+        jaggedArrayService.sortArrayLinesByMinElementDesc(jaggedArray);
+        System.out.println();
+        jaggedArrayService.sortArrayLinesByMaxElementAsc(jaggedArray2);
 
         jaggedArrayView.printJaggedArray(jaggedArray);
 
-        System.out.println(jaggedArray.equals(jaggedArray2));
-        System.out.println(jaggedArray.hashCode());
-        System.out.println(jaggedArray2.hashCode());
+        jaggedArrayView.printJaggedArray(jaggedArray2);
     }
 }

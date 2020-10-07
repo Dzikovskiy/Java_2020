@@ -69,7 +69,19 @@ public class JaggedArrayService {
         return result;
     }
 
-    public void sortArrayLinesBySum(JaggedArray jaggedArray) {
+    public void sortArrayLinesBySumAsc(JaggedArray jaggedArray) {
+        for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arrayService.getSumOfArray(jaggedArray.get(j)) < arrayService.getSumOfArray(jaggedArray.get(j + 1))) {
+                    Array tmp = jaggedArray.get(j);
+                    jaggedArray.set(j, jaggedArray.get(j + 1));
+                    jaggedArray.set(j + 1, tmp);
+                }
+            }
+        }
+    }
+
+    public void sortArrayLinesBySumDesc(JaggedArray jaggedArray) {
         for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arrayService.getSumOfArray(jaggedArray.get(j)) > arrayService.getSumOfArray(jaggedArray.get(j + 1))) {
@@ -81,7 +93,7 @@ public class JaggedArrayService {
         }
     }
 
-    public void sortArrayLinesByMaxElement(JaggedArray jaggedArray) {
+    public void sortArrayLinesByMaxElementAsc(JaggedArray jaggedArray) {
         for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arrayService.getMaxElement(jaggedArray.get(j)) > arrayService.getMaxElement(jaggedArray.get(j + 1))) {
@@ -93,7 +105,31 @@ public class JaggedArrayService {
         }
     }
 
-    public void sortArrayLinesByMinElement(JaggedArray jaggedArray) {
+    public void sortArrayLinesByMaxElementDesc(JaggedArray jaggedArray) {
+        for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arrayService.getMaxElement(jaggedArray.get(j)) < arrayService.getMaxElement(jaggedArray.get(j + 1))) {
+                    Array tmp = jaggedArray.get(j);
+                    jaggedArray.set(j, jaggedArray.get(j + 1));
+                    jaggedArray.set(j + 1, tmp);
+                }
+            }
+        }
+    }
+
+    public void sortArrayLinesByMinElementDesc(JaggedArray jaggedArray) {
+        for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arrayService.getMinElement(jaggedArray.get(j)) < arrayService.getMinElement(jaggedArray.get(j + 1))) {
+                    Array tmp = jaggedArray.get(j);
+                    jaggedArray.set(j, jaggedArray.get(j + 1));
+                    jaggedArray.set(j + 1, tmp);
+                }
+            }
+        }
+    }
+
+    public void sortArrayLinesByMinElementAsc(JaggedArray jaggedArray) {
         for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arrayService.getMinElement(jaggedArray.get(j)) > arrayService.getMinElement(jaggedArray.get(j + 1))) {
