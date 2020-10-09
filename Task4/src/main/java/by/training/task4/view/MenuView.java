@@ -15,9 +15,10 @@ public class MenuView {
     ArrayView arrayView = new ArrayView();
     ArrayService arrayService = new ArrayService();
     JaggedArrayService jaggedArrayService = new JaggedArrayService();
-    JaggedArray jaggedArray1= new JaggedArray();
-    JaggedArray jaggedArray2= new JaggedArray();
-;
+    JaggedArray jaggedArray1 = new JaggedArray();
+    JaggedArray jaggedArray2 = new JaggedArray();
+    ;
+
     public void menu() throws IOException {
         while (true) {
             System.out.println("\n1. Create Array from console");
@@ -38,7 +39,13 @@ public class MenuView {
             System.out.println("16. Add row to the JaggedArray 2");
             System.out.println("17. Print JaggedArray 1");
             System.out.println("18. Print JaggedArray 2");
-            System.out.println("20. exit");
+            System.out.println("19. Compare jagged arrays size");
+            System.out.println("20. Is jagArr 1 square matrix ?");
+            System.out.println("21. Is jagArr 1 square matrix ?");
+            System.out.println("22. Print subtraction of jagged arrays");
+            System.out.println("23. Print sum of jagged arrays");
+
+            System.out.println("25. exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -101,7 +108,22 @@ public class MenuView {
                 case 18:
                     jaggedArrayView.printJaggedArray(jaggedArray2);
                     break;
+                case 19:
+                    jaggedArrayView.compareSize(jaggedArray1, jaggedArray2);
+                    break;
                 case 20:
+                    jaggedArrayView.printIsSquareMatrix(jaggedArray1);
+                    break;
+                case 21:
+                    jaggedArrayView.printIsSquareMatrix(jaggedArray2);
+                    break;
+                case 22:
+                    jaggedArrayView.printSubtractionOfArrays(jaggedArray1, jaggedArray2);
+                    break;
+                case 23:
+                    jaggedArrayView.printSumOfArrays(jaggedArray1, jaggedArray2);
+                    break;
+                case 25:
                     return;
                 default:
                     System.out.println("Wrong command !");
