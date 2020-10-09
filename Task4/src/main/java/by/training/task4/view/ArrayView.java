@@ -18,6 +18,11 @@ public class ArrayView {
         this.arrayService = new ArrayService();
     }
 
+    /**
+     * Method for printing given Array
+     *
+     * @param array
+     */
     public void printArray(Array array) {
         System.out.print("[");
         IntStream.range(0, array.getLength()).mapToObj(i -> array.get(i) + ", ").forEach(System.out::print);

@@ -96,6 +96,15 @@ public class ArrayService {
         arraySortService.selectionSort(arrayToSort);
     }
 
+    /**
+     * Method for binary searching of index of the given element
+     *
+     * @param sortedArray
+     * @param key         element to search
+     * @param low         could be first element
+     * @param high        could be last element
+     * @return element index if found or -1 if not
+     */
     public int binarySearch(int[] sortedArray, int key, int low, int high) {
         int index = -1;
 
@@ -172,6 +181,13 @@ public class ArrayService {
         return resultArray;
     }
 
+    /**
+     * Method for scaling an Array
+     *
+     * @param array given Array
+     * @param scale to scale
+     * @return scaled array
+     */
     public Array scaleArray(Array array, int scale) {
         for (int i = 0; i < array.getLength(); i++) {
             array.set(i, array.get(i) * scale);
@@ -179,6 +195,13 @@ public class ArrayService {
         return array;
     }
 
+    /**
+     * Method for summing two arrays
+     *
+     * @param array1
+     * @param array2
+     * @return resulted array
+     */
     public Array sumArrays(Array array1, Array array2) {//TODO exception of sizes
         Array result = new Array();
         for (int i = 0; i < array1.getLength(); i++) {
@@ -187,6 +210,11 @@ public class ArrayService {
         return result;
     }
 
+    /**
+     * @param array1 Method for subtraction of two Arrays
+     * @param array2
+     * @return resulted Array
+     */
     public Array subtractArrays(Array array1, Array array2) {//TODO exception of sizes
         Array result = new Array();
         for (int i = 0; i < array1.getLength(); i++) {
@@ -195,6 +223,12 @@ public class ArrayService {
         return result;
     }
 
+    /**
+     * Method for getting sum of all Array elements
+     *
+     * @param array given Array
+     * @return sum of the elements
+     */
     public int getSumOfArray(Array array) {
         int sum = 0;
         for (int i = 0; i < array.getLength(); i++) {
@@ -203,6 +237,12 @@ public class ArrayService {
         return sum;
     }
 
+    /**
+     * Method for getting max element of given Array
+     *
+     * @param array given Array
+     * @return max element
+     */
     public int getMaxElement(Array array) {
         int max = array.get(0);
         for (int i = 0; i < array.getLength(); i++) {
@@ -213,6 +253,12 @@ public class ArrayService {
         return max;
     }
 
+    /**
+     * Method for getting min element of given Array
+     *
+     * @param array given Array
+     * @return min element
+     */
     public int getMinElement(Array array) {
         int min = array.get(0);
 

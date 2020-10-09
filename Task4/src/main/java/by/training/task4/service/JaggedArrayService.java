@@ -13,6 +13,13 @@ public class JaggedArrayService {
         this.arrayService = new ArrayService();
     }
 
+    /**
+     * Method for comparing JaggedArray sizes
+     *
+     * @param array1
+     * @param array2
+     * @return true if same, false if not
+     */
     public boolean compareSize(JaggedArray array1, JaggedArray array2) {
 
         //compare number of lines for both arrays
@@ -29,6 +36,12 @@ public class JaggedArrayService {
         return true;
     }
 
+    /**
+     * Method for checking of matrix is square
+     *
+     * @param jaggedArray
+     * @return true if square
+     */
     public boolean isSquareMatrix(JaggedArray jaggedArray) {
         int size = jaggedArray.getLength();
         if (size == 0) {
@@ -42,12 +55,25 @@ public class JaggedArrayService {
         return true;
     }
 
+    /**
+     * Method for scaling JaggedArray
+     *
+     * @param jaggedArray given matrix
+     * @param scale       factor
+     */
     public void scaleMatrix(JaggedArray jaggedArray, int scale) {
         for (int i = 0; i < jaggedArray.getLength(); i++) {
             jaggedArray.set(i, arrayService.scaleArray(jaggedArray.get(i), scale));
         }
     }
 
+    /**
+     * Method for summing two JaggedArrays
+     *
+     * @param jaggedArray1
+     * @param jaggedArray2
+     * @return summed matrix
+     */
     public JaggedArray sumArrays(JaggedArray jaggedArray1, JaggedArray jaggedArray2) {
         JaggedArray result = new JaggedArray();
 
@@ -60,6 +86,13 @@ public class JaggedArrayService {
         return result;
     }
 
+    /**
+     * Method for subtraction of two JaggedArrays
+     *
+     * @param jaggedArray1
+     * @param jaggedArray2
+     * @return subtracted matrix
+     */
     public JaggedArray subtractArrays(JaggedArray jaggedArray1, JaggedArray jaggedArray2) {
         JaggedArray result = new JaggedArray();
 
@@ -144,6 +177,12 @@ public class JaggedArrayService {
         }
     }
 
+    /**
+     * Method for getting maximum lines length
+     *
+     * @param jaggedArray
+     * @return max lines length
+     */
     public int getMaxLinesLength(JaggedArray jaggedArray) {
         int max = 0;
         for (int i = 0; i < jaggedArray.getLength(); i++) {
@@ -154,6 +193,11 @@ public class JaggedArrayService {
         return max;
     }
 
+    /**
+     * Method for transposing of matrix
+     *
+     * @param jaggedArray given matrix
+     */
     public void transposeMatrix(JaggedArray jaggedArray) {
         if (isSquareMatrix(jaggedArray)) {
             for (int i = 0; i < jaggedArray.getLength(); i++) {
@@ -190,7 +234,5 @@ public class JaggedArrayService {
 
         }
     }
-
-
 
 }

@@ -15,6 +15,11 @@ public class JaggedArrayView {
         this.jaggedArrayService = new JaggedArrayService();
     }
 
+    /**
+     * Method for printing the given JaggedArray
+     *
+     * @param jaggedArray given JaggedArray
+     */
     public void printJaggedArray(JaggedArray jaggedArray) {
         ArrayView arrayView = new ArrayView();
         for (int i = 0; i < jaggedArray.getLength(); i++) {
@@ -23,6 +28,12 @@ public class JaggedArrayView {
         }
     }
 
+    /**
+     * Method for comparing JaggedArrays and printing if they have same size
+     *
+     * @param array1
+     * @param array2
+     */
     public void compareSize(JaggedArray array1, JaggedArray array2) {
         if (jaggedArrayService.compareSize(array1, array2)) {
             System.out.println("Same size");
@@ -31,6 +42,11 @@ public class JaggedArrayView {
         }
     }
 
+    /**
+     * Method for printing if Matrix is square
+     *
+     * @param jaggedArray
+     */
     public void printIsSquareMatrix(JaggedArray jaggedArray) {
         if (jaggedArrayService.isSquareMatrix(jaggedArray)) {
             System.out.println("Its square matrix");
@@ -39,17 +55,34 @@ public class JaggedArrayView {
         }
     }
 
+    /**
+     * Method for printing sum of two JaggedArrays
+     *
+     * @param jaggedArray1
+     * @param jaggedArray2
+     */
     public void printSumOfArrays(JaggedArray jaggedArray1, JaggedArray jaggedArray2) {
         JaggedArray result = jaggedArrayService.sumArrays(jaggedArray1, jaggedArray2);
         printJaggedArray(result);
     }
 
+    /**
+     * Method for printing subtraction of two JaggedArrays
+     *
+     * @param jaggedArray1
+     * @param jaggedArray2
+     */
     public void printSubtractionOfArrays(JaggedArray jaggedArray1, JaggedArray jaggedArray2) {
         JaggedArray result = jaggedArrayService.subtractArrays(jaggedArray1, jaggedArray2);
         printJaggedArray(result);
     }
 
-    public void addElementFromConsole(JaggedArray jaggedArray){
+    /**
+     * Method for adding new line to given JaggedArray
+     *
+     * @param jaggedArray
+     */
+    public void addElementFromConsole(JaggedArray jaggedArray) {
         Array array = new Array();
         ArrayView arrayView = new ArrayView();
         try {
@@ -60,10 +93,15 @@ public class JaggedArrayView {
         jaggedArray.add(array);
     }
 
-    public void scaleMatrix(JaggedArray jaggedArray){
+    /**
+     * Method for scaling given JaggedArray
+     *
+     * @param jaggedArray
+     */
+    public void scaleMatrix(JaggedArray jaggedArray) {
         System.out.println("Enter scale:");
         if (scanner.hasNextInt()) {
-           jaggedArrayService.scaleMatrix(jaggedArray,scanner.nextInt());
+            jaggedArrayService.scaleMatrix(jaggedArray, scanner.nextInt());
         }
     }
 
