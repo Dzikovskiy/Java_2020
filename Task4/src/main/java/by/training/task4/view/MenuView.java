@@ -44,8 +44,9 @@ public class MenuView {
             System.out.println("21. Is jagArr 1 square matrix ?");
             System.out.println("22. Print subtraction of jagged arrays");
             System.out.println("23. Print sum of jagged arrays");
-
-            System.out.println("25. exit");
+            System.out.println("24. Scale jagged array 1");
+            System.out.println("25. Transpose jagged array 1");
+            System.out.println("26. exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -123,7 +124,13 @@ public class MenuView {
                 case 23:
                     jaggedArrayView.printSumOfArrays(jaggedArray1, jaggedArray2);
                     break;
+                case 24:
+                    jaggedArrayView.scaleMatrix(jaggedArray1);
+                    break;
                 case 25:
+                    jaggedArrayService.transposeMatrix(jaggedArray1);
+                    break;
+                case 26:
                     return;
                 default:
                     System.out.println("Wrong command !");

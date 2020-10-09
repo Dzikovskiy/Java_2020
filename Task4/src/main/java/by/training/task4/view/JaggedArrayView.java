@@ -5,9 +5,11 @@ import by.training.task4.entity.JaggedArray;
 import by.training.task4.service.JaggedArrayService;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class JaggedArrayView {
-    JaggedArrayService jaggedArrayService;
+    private JaggedArrayService jaggedArrayService;
+    private Scanner scanner = new Scanner(System.in);
 
     public JaggedArrayView() {
         this.jaggedArrayService = new JaggedArrayService();
@@ -56,6 +58,13 @@ public class JaggedArrayView {
             e.printStackTrace();
         }
         jaggedArray.add(array);
+    }
+
+    public void scaleMatrix(JaggedArray jaggedArray){
+        System.out.println("Enter scale:");
+        if (scanner.hasNextInt()) {
+           jaggedArrayService.scaleMatrix(jaggedArray,scanner.nextInt());
+        }
     }
 
 }
