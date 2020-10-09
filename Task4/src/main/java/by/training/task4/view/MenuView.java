@@ -46,7 +46,10 @@ public class MenuView {
             System.out.println("23. Print sum of jagged arrays");
             System.out.println("24. Scale jagged array 1");
             System.out.println("25. Transpose jagged array 1");
-            System.out.println("26. exit");
+            System.out.println("26. Sort lines by max element in jagged array 1");
+            System.out.println("27. Sort lines by sum in jagged array 1");
+            System.out.println("28. Sort lines by min element in jagged array 1");
+            System.out.println("29. exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -131,6 +134,15 @@ public class MenuView {
                     jaggedArrayService.transposeMatrix(jaggedArray1);
                     break;
                 case 26:
+                    jaggedArrayService.sortArrayLinesByMaxElementAsc(jaggedArray1);
+                    break;
+                case 27:
+                    jaggedArrayService.sortArrayLinesBySumAsc(jaggedArray1);
+                    break;
+                case 28:
+                    jaggedArrayService.sortArrayLinesByMinElementAsc(jaggedArray1);
+                    break;
+                case 29:
                     return;
                 default:
                     System.out.println("Wrong command !");
