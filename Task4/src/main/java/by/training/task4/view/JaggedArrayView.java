@@ -1,7 +1,10 @@
 package by.training.task4.view;
 
+import by.training.task4.entity.Array;
 import by.training.task4.entity.JaggedArray;
 import by.training.task4.service.JaggedArrayService;
+
+import java.io.IOException;
 
 public class JaggedArrayView {
     JaggedArrayService jaggedArrayService;
@@ -44,5 +47,15 @@ public class JaggedArrayView {
         printJaggedArray(result);
     }
 
+    public void addElementFromConsole(JaggedArray jaggedArray){
+        Array array = new Array();
+        ArrayView arrayView = new ArrayView();
+        try {
+            arrayView.fillArrayFromConsole(array);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        jaggedArray.add(array);
+    }
 
 }

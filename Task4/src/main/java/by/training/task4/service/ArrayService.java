@@ -172,7 +172,6 @@ public class ArrayService {
         return resultArray;
     }
 
-
     public Array scaleArray(Array array, int scale) {
         for (int i = 0; i < array.getLength(); i++) {
             array.set(i, array.get(i) * scale);

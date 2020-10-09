@@ -2,6 +2,9 @@ package by.training.task4.service;
 
 import by.training.task4.entity.Array;
 import by.training.task4.entity.JaggedArray;
+import by.training.task4.view.ArrayView;
+
+import java.io.IOException;
 
 public class JaggedArrayService {
     private ArrayService arrayService;
@@ -187,5 +190,7 @@ public class JaggedArrayService {
 
         }
     }
+
+
 
 }

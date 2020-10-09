@@ -1,7 +1,9 @@
 package by.training.task4.view;
 
 import by.training.task4.entity.Array;
+import by.training.task4.entity.JaggedArray;
 import by.training.task4.service.ArrayService;
+import by.training.task4.service.JaggedArrayService;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -12,7 +14,10 @@ public class MenuView {
     Array array = new Array();
     ArrayView arrayView = new ArrayView();
     ArrayService arrayService = new ArrayService();
-
+    JaggedArrayService jaggedArrayService = new JaggedArrayService();
+    JaggedArray jaggedArray1= new JaggedArray();
+    JaggedArray jaggedArray2= new JaggedArray();
+;
     public void menu() throws IOException {
         while (true) {
             System.out.println("\n1. Create Array from console");
@@ -29,6 +34,10 @@ public class MenuView {
             System.out.println("12. Print prime numbers in Array");
             System.out.println("13. Print fib numbers in Array");
             System.out.println("14. Print three digit numbers in Array");
+            System.out.println("15. Add row to the JaggedArray 1");
+            System.out.println("16. Add row to the JaggedArray 2");
+            System.out.println("17. Print JaggedArray 1");
+            System.out.println("18. Print JaggedArray 2");
             System.out.println("20. exit");
 
             switch (scanner.nextInt()) {
@@ -80,7 +89,18 @@ public class MenuView {
                 case 14:
                     arrayView.printNoneDuplicatedThreeDigitNumbersFromArray(array);
                     break;
-
+                case 15:
+                    jaggedArrayView.addElementFromConsole(jaggedArray1);
+                    break;
+                case 16:
+                    jaggedArrayView.addElementFromConsole(jaggedArray2);
+                    break;
+                case 17:
+                    jaggedArrayView.printJaggedArray(jaggedArray1);
+                    break;
+                case 18:
+                    jaggedArrayView.printJaggedArray(jaggedArray2);
+                    break;
                 case 20:
                     return;
                 default:
