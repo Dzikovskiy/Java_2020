@@ -11,7 +11,7 @@ public class TextEditorView {
     Scanner scanner = new Scanner(System.in);
 
     /**
-     * Method for changing for replacing character on the entered index with
+     * Method for printing and changing for replacing character on the entered index with
      * the entered from console given char in every word
      *
      * @param string to change
@@ -36,12 +36,24 @@ public class TextEditorView {
         return scanner.nextLine();
     }
 
+    /**
+     * Method for printing replacing character after character
+     *
+     * @param command given command
+     * @param string  given string
+     * @return result string
+     */
     public String replaceCharacterAfterCharacterView(CharacterAfterCharacterChangerCommand command, String string) {
         String result = command.replaceCharacterAfterCharacterInEachWord(string);
         System.out.println(result);
         return result;
     }
 
+    /**
+     * Method for printing string with replaced words with given length
+     *
+     * @param string given string
+     */
     public void replaceWordsByLengthWithSubstring(String string) {
         SubstringByLengthChanger substringByLengthChanger = new SubstringByLengthChanger();
         int length;
@@ -52,7 +64,7 @@ public class TextEditorView {
         scanner.nextLine();// takes \n
         System.out.println("Enter substring: ");
         substring = scanner.nextLine();
-        System.out.println(substring);
+
         System.out.println(substringByLengthChanger.changeSubstringByLength(string, substring, length));
 
     }
