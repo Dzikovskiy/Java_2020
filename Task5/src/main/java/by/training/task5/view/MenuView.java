@@ -16,9 +16,10 @@ public class MenuView {
             System.out.println("\n1. Create String from console");
             System.out.println("2. Replace character in each word with String methods");
             System.out.println("3. Replace character in each word with StringBuilder methods");
-            System.out.println("4. Replace \"ра\" to \"ро\" in each word with String methods");
-            System.out.println("5. Print String");
-            System.out.println("6. exit");
+            System.out.println("4. Replace \"ра\" to \"ро\" in each word with String methods and save");
+            System.out.println("5. Replace words by length with substring");
+            System.out.println("6. Print String");
+            System.out.println("7. exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -35,9 +36,12 @@ public class MenuView {
                             .replaceCharacterAfterCharacterView(new CharacterAfterCharacterChangerWithStringOperation(), string);
                     break;
                 case 5:
-                    System.out.println(string);
+                    textEditorView.replaceWordsByLengthWithSubstring(string);
                     break;
                 case 6:
+                    System.out.println(string);
+                    break;
+                case 7:
                     return;
                 default:
                     System.out.println("Wrong command !");

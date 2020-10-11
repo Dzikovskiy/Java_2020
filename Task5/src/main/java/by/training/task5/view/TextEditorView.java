@@ -2,6 +2,7 @@ package by.training.task5.view;
 
 import by.training.task5.service.CharacterAfterCharacterChangerCommand;
 import by.training.task5.service.CharacterOnIndexChangerCommand;
+import by.training.task5.service.SubstringByLengthChanger;
 
 import java.util.Scanner;
 
@@ -39,5 +40,20 @@ public class TextEditorView {
         String result = command.replaceCharacterAfterCharacterInEachWord(string);
         System.out.println(result);
         return result;
+    }
+
+    public void replaceWordsByLengthWithSubstring(String string) {
+        SubstringByLengthChanger substringByLengthChanger = new SubstringByLengthChanger();
+        int length;
+        String substring;
+
+        System.out.println("Enter length of words to replace: ");
+        length = scanner.nextInt();
+        scanner.nextLine();// takes \n
+        System.out.println("Enter substring: ");
+        substring = scanner.nextLine();
+        System.out.println(substring);
+        System.out.println(substringByLengthChanger.changeSubstringByLength(string, substring, length));
+
     }
 }
