@@ -1,5 +1,6 @@
 package by.training.task5.view;
 
+import by.training.task5.service.CharacterCommand;
 import by.training.task5.service.CharacterService;
 
 import java.util.Scanner;
@@ -14,14 +15,14 @@ public class TextEditorView {
      *
      * @param string to change
      */
-    public void replaceCharacterInEachWordView(String string) {
+    public void replaceCharacterInEachWordView(CharacterCommand command, String string) {
         int index;
         char symbol;
         System.out.println("Enter index of character to change: ");
         index = scanner.nextInt();
         System.out.println("Enter character: ");
         symbol = scanner.next().charAt(0);
-        System.out.println(characterService.replaceCharacterInEachWord(string, symbol, index));
+        System.out.println(command.replaceCharacterInEachWord(string, symbol, index));
     }
 
     /**

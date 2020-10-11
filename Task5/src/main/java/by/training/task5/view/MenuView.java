@@ -1,5 +1,8 @@
 package by.training.task5.view;
 
+import by.training.task5.service.CharacterStringBuilderOperation;
+import by.training.task5.service.CharacterStringOperation;
+
 import java.util.Scanner;
 
 public class MenuView {
@@ -10,8 +13,8 @@ public class MenuView {
     public void menu() {
         while (true) {
             System.out.println("\n1. Create String from console");
-            System.out.println("2. Replace character in each word");
-            System.out.println("3. Create Array from random numbers");
+            System.out.println("2. Replace character in each word with String methods");
+            System.out.println("3. Replace character in each word with StringBuilder methods");
             System.out.println("4. Print String");
             System.out.println("5. Find number index in Array");
             System.out.println("6. exit");
@@ -21,10 +24,10 @@ public class MenuView {
                     string = textEditorView.createStringFormConsole();
                     break;
                 case 2:
-                    textEditorView.replaceCharacterInEachWordView(string);
+                    textEditorView.replaceCharacterInEachWordView(new CharacterStringOperation(), string);
                     break;
                 case 3:
-
+                    textEditorView.replaceCharacterInEachWordView(new CharacterStringBuilderOperation(), string);
                     break;
                 case 4:
                     System.out.println(string);
