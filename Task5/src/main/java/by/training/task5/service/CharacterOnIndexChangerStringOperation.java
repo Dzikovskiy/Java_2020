@@ -1,6 +1,6 @@
 package by.training.task5.service;
 
-public class CharacterStringOperation extends CharacterCommand {
+public class CharacterOnIndexChangerStringOperation extends CharacterOnIndexChangerCommand {
     /**
      * Method for replacing character on some index with given char in every word
      *
@@ -13,4 +13,6 @@ public class CharacterStringOperation extends CharacterCommand {
     public String replaceCharacterInEachWord(String string, char c, int index) {
         return string.replaceAll(String.format("(\\b\\p{L}{%d})\\p{L}", index - 1), "$1" + c);
     }
+
+
 }

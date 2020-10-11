@@ -1,6 +1,6 @@
 package by.training.task5.service;
 
-public class CharacterStringBuilderOperation extends CharacterCommand {
+public class CharacterOnIndexChangerStringBuilderOperation extends CharacterOnIndexChangerCommand {
     /**
      * Method for replacing character on some index with given char in every word
      *
@@ -24,4 +24,5 @@ public class CharacterStringBuilderOperation extends CharacterCommand {
         }
         return sb.toString();
     }
+
 }

@@ -1,12 +1,12 @@
 package by.training.task5.view;
 
-import by.training.task5.service.CharacterCommand;
-import by.training.task5.service.CharacterService;
+import by.training.task5.service.CharacterAfterCharacterChangerCommand;
+import by.training.task5.service.CharacterOnIndexChangerCommand;
 
 import java.util.Scanner;
 
 public class TextEditorView {
-    CharacterService characterService = new CharacterService();
+
     Scanner scanner = new Scanner(System.in);
 
     /**
@@ -15,7 +15,7 @@ public class TextEditorView {
      *
      * @param string to change
      */
-    public void replaceCharacterInEachWordView(CharacterCommand command, String string) {
+    public void replaceCharacterInEachWordView(CharacterOnIndexChangerCommand command, String string) {
         int index;
         char symbol;
         System.out.println("Enter index of character to change: ");
@@ -33,5 +33,11 @@ public class TextEditorView {
     public String createStringFormConsole() {
         System.out.println("Enter string of words: ");
         return scanner.nextLine();
+    }
+
+    public String replaceCharacterAfterCharacterView(CharacterAfterCharacterChangerCommand command, String string) {
+        String result = command.replaceCharacterAfterCharacterInEachWord(string);
+        System.out.println(result);
+        return result;
     }
 }
