@@ -39,7 +39,7 @@ public class MenuView {
                     break;
                 case 4:
                     string = textEditorView
-                            .replaceCharacterAfterCharacterView(new CharacterAfterCharacterChangerWithStringOperation(), string);
+                            .replaceCharacterAfterCharacterView(new CharacterAfterCharacterChangerWithStringOperation(string));
                     fileService.writeTextToFile(string);
                     break;
                 case 5:

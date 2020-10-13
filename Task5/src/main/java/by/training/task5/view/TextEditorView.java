@@ -38,11 +38,10 @@ public class TextEditorView {
      * Method for printing replacing character after character
      *
      * @param command given command
-     * @param string  given string
      * @return result string
      */
-    public String replaceCharacterAfterCharacterView(CharacterAfterCharacterChangerCommand command, String string) {
-        String result = command.replaceCharacterAfterCharacterInEachWord(string);
+    public String replaceCharacterAfterCharacterView(Command command) {
+        String result = command.execute();
         System.out.println(result);
         return result;
     }
