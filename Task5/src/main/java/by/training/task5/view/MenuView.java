@@ -19,9 +19,9 @@ public class MenuView {
             System.out.println("4. Replace \"ра\" to \"ро\" in each word with String methods and save");
             System.out.println("5. Replace words by length with substring");
             System.out.println("6. Remove all non characters and double whitespaces");
-            System.out.println("6. Remove words by length that start with consonant");
-            System.out.println("7. Print String");
-            System.out.println("8. exit");
+            System.out.println("7. Remove words by length that start with consonant");
+            System.out.println("8. Print String");
+            System.out.println("9. exit");
 
             switch (scanner.nextInt()) {
                 case 1:
