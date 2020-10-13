@@ -2,6 +2,7 @@ package by.training.task5.view;
 
 import by.training.task5.service.CharacterAfterCharacterChangerCommand;
 import by.training.task5.service.CharacterOnIndexChangerCommand;
+import by.training.task5.service.NonCharacterRemover;
 import by.training.task5.service.SubstringByLengthChanger;
 
 import java.util.Scanner;
@@ -67,5 +68,10 @@ public class TextEditorView {
 
         System.out.println(substringByLengthChanger.changeSubstringByLength(string, substring, length));
 
+    }
+
+    public void replaceNonCharacters(String string) {
+        NonCharacterRemover remover = new NonCharacterRemover();
+        System.out.println(remover.removeNonCharacters(string));
     }
 }
