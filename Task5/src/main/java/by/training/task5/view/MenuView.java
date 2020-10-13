@@ -19,6 +19,7 @@ public class MenuView {
             System.out.println("4. Replace \"ра\" to \"ро\" in each word with String methods and save");
             System.out.println("5. Replace words by length with substring");
             System.out.println("6. Remove all non characters and double whitespaces");
+            System.out.println("6. Remove words by length that start with consonant");
             System.out.println("7. Print String");
             System.out.println("8. exit");
 
@@ -43,9 +44,12 @@ public class MenuView {
                     textEditorView.replaceNonCharacters(string);
                     break;
                 case 7:
-                    System.out.println(string);
+                    textEditorView.removeWordsByLength(string);
                     break;
                 case 8:
+                    System.out.println(string);
+                    break;
+                case 9:
                     return;
                 default:
                     System.out.println("Wrong command !");

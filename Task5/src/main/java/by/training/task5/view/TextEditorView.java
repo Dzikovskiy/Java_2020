@@ -1,9 +1,6 @@
 package by.training.task5.view;
 
-import by.training.task5.service.CharacterAfterCharacterChangerCommand;
-import by.training.task5.service.CharacterOnIndexChangerCommand;
-import by.training.task5.service.NonCharacterRemover;
-import by.training.task5.service.SubstringByLengthChanger;
+import by.training.task5.service.*;
 
 import java.util.Scanner;
 
@@ -73,5 +70,13 @@ public class TextEditorView {
     public void replaceNonCharacters(String string) {
         NonCharacterRemover remover = new NonCharacterRemover();
         System.out.println(remover.removeNonCharacters(string));
+    }
+
+    public void removeWordsByLength(String string) {
+        int length;
+        WordsStartedWithConsonantRemoverByLength remover = new WordsStartedWithConsonantRemoverByLength();
+        System.out.println("Enter length of words to replace: ");
+        length = scanner.nextInt();
+        System.out.println(remover.removeWords(string, length));
     }
 }
