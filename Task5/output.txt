@@ -1,0 +1,6 @@
+Text ,file  123123as String ,  in Java родуга родость моя роро
+Effective Java,, is the best book for senior Developers.
+Clean code 44545is the best book for Junior Developers.
+whole file as String using   BufferedReader and StringBuilder
+Effectivdfgdfge Java is  t he best book 4545for senior Developers.
+Clean code is the best book for Junior Developers.

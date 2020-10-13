@@ -79,4 +79,9 @@ public class TextEditorView {
         length = scanner.nextInt();
         System.out.println(remover.removeWords(string, length));
     }
+
+    public String createStringFromFile(){
+        FileService fromFile = new FileService();
+        return fromFile.readTextFromFile();
+    }
 }
