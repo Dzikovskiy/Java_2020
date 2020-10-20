@@ -10,7 +10,6 @@ public class BookSpecification implements ISpecification<Book> {
     Predicate<Book> bookPredicate;
     Comparator<Book> bookComparator;
 
-
     public BookSpecification(Predicate<Book> bookPredicate, Comparator<Book> bookComparator) {
         this.bookPredicate = bookPredicate;
         this.bookComparator = bookComparator;

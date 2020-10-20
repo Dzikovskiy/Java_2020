@@ -18,7 +18,7 @@ public class BookListDao {
 
     }
 
-    public ArrayList<Book> findByTag(ISpecification<Book> specification){
+    public ArrayList<Book> getBySpecification(ISpecification<Book> specification){
         Stream<Book> result = books.stream();
 
         if(specification.getFilter()!=null){
@@ -29,5 +29,7 @@ public class BookListDao {
         }
         return (ArrayList<Book>) result.collect(Collectors.toList());
     }
+
+
 
 }
