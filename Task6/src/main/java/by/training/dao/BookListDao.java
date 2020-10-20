@@ -38,7 +38,11 @@ public class BookListDao {
     }
 
     public void addBook(Book book) {
-
+        if (books.contains(book)) {
+            throw new IllegalArgumentException("That book is already in the storage");
+        } else {
+            books.add(book);
+        }
     }
 
     public void removeBook(Book book) {
