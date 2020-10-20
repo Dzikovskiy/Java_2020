@@ -1,15 +1,15 @@
 package by.training;
 
 import by.training.entity.Book;
-import by.training.service.CSVReader;
+import by.training.repository.BookRepository;
 
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        CSVReader reader = new CSVReader();
-        ArrayList<Book> books = reader.readCSVFormFile("books.csv");
+        BookRepository bookRepository = new BookRepository();
 
+        ArrayList<Book> books = bookRepository.getSortedByTitle();
         books.forEach(System.out::println);
 
     }
