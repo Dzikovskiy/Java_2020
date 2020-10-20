@@ -1,6 +1,7 @@
 package by.training.dao;
 
 import by.training.entity.Book;
+import by.training.specification.ISpecification;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
