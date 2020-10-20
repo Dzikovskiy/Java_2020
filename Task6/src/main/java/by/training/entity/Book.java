@@ -1,14 +1,19 @@
 package by.training.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
     private long isbnNumber;// like id for every book
     private String title;
-    private List<Author> authors;
     private int numberOfPages;
     private String publishingHouse;
     private int yearOfPublishing;
+    private List<Author> authors;
+
+    public Book() {
+        this.authors = new ArrayList<>();
+    }
 
     public void addAuthor(Author author) {
         if (author != null) {
@@ -88,5 +93,17 @@ public class Book {
         result = 31 * result + publishingHouse.hashCode();
         result = 31 * result + yearOfPublishing;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "isbnNumber=" + isbnNumber +
+                ", title='" + title + '\'' +
+                ", numberOfPages=" + numberOfPages +
+                ", publishingHouse='" + publishingHouse + '\'' +
+                ", yearOfPublishing=" + yearOfPublishing +
+                ", authors=" + authors +
+                '}';
     }
 }
