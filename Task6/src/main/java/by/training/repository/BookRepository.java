@@ -14,7 +14,7 @@ public class BookRepository implements IRepository<Book> {
     BookListDao bookListDao = new BookListDao();
 
     @Override
-    public List<Book> getAll() {
+    public ArrayList<Book> getAll() {
         return bookListDao.getAll();
     }
 

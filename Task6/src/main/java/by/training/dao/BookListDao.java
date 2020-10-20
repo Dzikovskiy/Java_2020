@@ -7,6 +7,7 @@ import by.training.specification.ISpecification;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -46,7 +47,11 @@ public class BookListDao {
     }
 
     public void removeBook(Book book) {
-
+        if (books.contains(book)) {
+            books.remove(book);
+        } else {
+            throw new NoSuchElementException("That book is not in the storage");
+        }
     }
 
     public ArrayList<Book> getBySpecification(ISpecification<Book> specification) {

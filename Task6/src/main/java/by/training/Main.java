@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         BookRepository bookRepository = new BookRepository();
 
-        ArrayList<Book> books = bookRepository.getSortedByTitle();
-        books.forEach(System.out::println);
+        ArrayList<Book> books = bookRepository.getAll();
+
         Book book = new Book();
         book.setIsbnNumber(123123123123L);
         book.setTitle("AHobbit");
@@ -25,8 +25,8 @@ public class Main {
         book.addAuthor(a1);
         book.addAuthor(a2);
 
-        bookRepository.save(book);
-
+        bookRepository.delete(book);
+        books.forEach(System.out::println);
 
     }
 }
