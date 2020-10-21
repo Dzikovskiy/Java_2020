@@ -22,6 +22,13 @@ public class BookListDao {
         getAll();
     }
 
+    public void saveAll(ArrayList<Book> books) {
+        if (books != null) {
+            CSVWriter writer = new CSVWriter();
+            writer.writeBookListToFile(books);
+        }
+    }
+
     public ArrayList<Book> getAll() {
         CSVReader reader = new CSVReader();
         String csvFileName = "inputCSV.csv";
@@ -69,6 +76,5 @@ public class BookListDao {
         }
         return (ArrayList<Book>) result.collect(Collectors.toList());
     }
-
 
 }

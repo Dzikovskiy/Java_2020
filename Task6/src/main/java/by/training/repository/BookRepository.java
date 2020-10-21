@@ -7,7 +7,6 @@ import by.training.specification.FindBookByTitle;
 import by.training.specification.SortByTitle;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class BookRepository implements IRepository<Book> {
 
@@ -26,6 +25,10 @@ public class BookRepository implements IRepository<Book> {
     @Override
     public void delete(Book book) {
         bookListDao.removeBook(book);
+    }
+
+    public void saveAll(ArrayList<Book> books) {
+        bookListDao.saveAll(books);
     }
 
     public ArrayList<Book> findByTitle(String title) {
