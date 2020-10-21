@@ -2,6 +2,7 @@ package by.training.dao;
 
 import by.training.entity.Book;
 import by.training.service.CSVReader;
+import by.training.service.CSVWriter;
 import by.training.specification.ISpecification;
 
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class BookListDao {
+    CSVWriter writer = new CSVWriter();
     private ArrayList<Book> books;
 
     public BookListDao() {
@@ -33,7 +35,7 @@ public class BookListDao {
             ex.printStackTrace();
         }
 
-        books = reader.readCSVFormFile(csvFileName);
+        books = reader.readBooksFormCSVFile(csvFileName);
 
         return books;
     }
@@ -43,12 +45,14 @@ public class BookListDao {
             throw new IllegalArgumentException("That book is already in the storage");
         } else {
             books.add(book);
+            writer.writeBookListToFile(books);
         }
     }
 
     public void removeBook(Book book) {
         if (books.contains(book)) {
             books.remove(book);
+            writer.writeBookListToFile(books);
         } else {
             throw new NoSuchElementException("That book is not in the storage");
         }

@@ -21,7 +21,7 @@ public class CSVReader {
      * @param csvFileName given csv file name
      * @return ArrayList of Books
      */
-    public ArrayList<Book> readCSVFormFile(String csvFileName) {
+    public ArrayList<Book> readBooksFormCSVFile(String csvFileName) {
         CSVReader app = new CSVReader();
         InputStream is = app.getFileFromResourceAsStream(csvFileName);
         List<Book> booksList = new ArrayList<>();
