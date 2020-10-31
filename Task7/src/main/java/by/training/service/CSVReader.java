@@ -37,6 +37,7 @@ public class CSVReader {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
             while ((line = br.readLine()) != null) {
+                logger.debug("Line from file: " + line);
 
                 // use comma as separator
                 String[] booksStringFromFile = line.split(csvSplitBy);
@@ -69,7 +70,7 @@ public class CSVReader {
 
                     publicationsList.add(publication);
 
-                    logger.info("Publication added to list: " + publication.toString());
+                    logger.debug("Publication added to list: " + publication.toString());
                 } catch (IllegalArgumentException ex) {
                     //nope
                 }

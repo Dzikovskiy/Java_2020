@@ -25,7 +25,7 @@ public class PublicationRepository implements IRepository<Publication> {
 
     @Override
     public void delete(Publication publication) {
-        publicationListDao.removeBook(publication);
+        publicationListDao.removeBook(publication.getIsbnNumber());
     }
 
     public void saveAll(ArrayList<Publication> publications) {

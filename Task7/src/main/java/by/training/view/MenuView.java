@@ -1,6 +1,7 @@
 package by.training.view;
 
 import by.training.entity.Publication;
+import by.training.entity.PublicationType;
 import by.training.repository.PublicationRepository;
 
 import java.util.ArrayList;
@@ -37,8 +38,12 @@ public class MenuView {
                     repository.save(publication);
                     break;
                 case 4:
-                    publication = publicationsView.addBook();
+                    System.out.print("\nEnter isbn: ");
+                    long isbn = scanner.nextLong();
+                    publication = new Publication(PublicationType.BOOK);
+                    publication.setIsbnNumber(isbn);
                     repository.delete(publication);
+                    break;
                 case 5:
                     System.out.print("\nEnter title: ");
                     scanner.nextLine();

@@ -12,6 +12,6 @@ public class Main {
         MenuView view = new MenuView();
         view.menu();
 
-        logger.info("Program stop");
+        logger.info("Program stopped by user");
     }
 }
