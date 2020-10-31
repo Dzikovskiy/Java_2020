@@ -5,6 +5,7 @@ import by.training.entity.Publication;
 import by.training.specification.FindPublicationByISBN;
 import by.training.specification.FindPublicationByTitle;
 import by.training.specification.SortByTitle;
+import by.training.specification.SortByTitleAndYear;
 
 import java.util.ArrayList;
 
@@ -44,4 +45,7 @@ public class PublicationRepository implements IRepository<Publication> {
     }
 
 
+    public ArrayList<Publication> getSortedByTitleAndYear() {
+        return publicationListDao.getBySpecification(new SortByTitleAndYear());
+    }
 }

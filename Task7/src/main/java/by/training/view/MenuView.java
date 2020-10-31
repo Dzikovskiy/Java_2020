@@ -22,7 +22,8 @@ public class MenuView {
             System.out.println("5. Find publication by title");
             System.out.println("6. Find publication by ISBN");
             System.out.println("7. Sort publications by title");
-            System.out.println("8. Exit");
+            System.out.println("8. Sort publications by title and year");
+            System.out.println("9. Exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -54,7 +55,12 @@ public class MenuView {
                     publications = repository.getSortedByTitle();
                     repository.saveAll(publications);
                     break;
+
                 case 8:
+                    publications = repository.getSortedByTitleAndYear();
+                    repository.saveAll(publications);
+                    break;
+                case 9:
                     return;
                 default:
                     System.out.println("Wrong command");

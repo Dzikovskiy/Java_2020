@@ -3,6 +3,8 @@ package by.training.service;
 import by.training.entity.Author;
 import by.training.entity.Publication;
 import by.training.entity.PublicationType;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +20,7 @@ public class CSVReader {
     private BookFactory bookFactory = BookFactory.getInstance();
     private MagazineFactory magazineFactory = MagazineFactory.getInstance();
     private NewspaperFactory newspaperFactory = NewspaperFactory.getInstance();
+    Logger logger = LogManager.getLogger();
 
     /**
      * Method for parsing csv file into ArrayList<Publication>
@@ -65,6 +68,8 @@ public class CSVReader {
                     }
 
                     publicationsList.add(publication);
+
+                    logger.info("Publication added to list: " + publication.toString());
                 } catch (IllegalArgumentException ex) {
                     //nope
                 }
