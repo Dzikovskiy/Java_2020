@@ -140,7 +140,7 @@ public class JaggedArrayService {
             }
         }
     }
-
+    
     public void sortArrayLinesByMaxElementDesc(JaggedArray jaggedArray) {
         for (int i = jaggedArray.getLength() - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
