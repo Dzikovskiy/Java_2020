@@ -71,6 +71,14 @@ public class Publication {
         this.yearOfPublishing = yearOfPublishing;
     }
 
+    public PublicationType getType() {
+        return type;
+    }
+
+    public void setType(PublicationType type) {
+        this.type = type;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -90,10 +98,11 @@ public class Publication {
     public int hashCode() {
         int result = (int) (isbnNumber ^ (isbnNumber >>> 32));
         result = 31 * result + title.hashCode();
-        result = 31 * result + authors.hashCode();
         result = 31 * result + numberOfPages;
         result = 31 * result + publishingHouse.hashCode();
         result = 31 * result + yearOfPublishing;
+        result = 31 * result + authors.hashCode();
+        result = 31 * result + type.hashCode();
         return result;
     }
 
@@ -106,6 +115,7 @@ public class Publication {
                 ", publishingHouse='" + publishingHouse + '\'' +
                 ", yearOfPublishing=" + yearOfPublishing +
                 ", authors=" + authors +
+                ", type=" + type +
                 '}';
     }
 }

@@ -19,7 +19,7 @@ public class CSVWriter {
             StringBuilder builder = new StringBuilder();
 
             for (Publication publication : publications) {
-                builder.append(publication.getIsbnNumber()).append(csvSplitBy).append(publication.getTitle()).append(csvSplitBy)
+                builder.append(publication.getType()).append(publication.getIsbnNumber()).append(csvSplitBy).append(publication.getTitle()).append(csvSplitBy)
                         .append(publication.getNumberOfPages()).append(csvSplitBy).append(publication.getPublishingHouse())
                         .append(csvSplitBy).append(publication.getYearOfPublishing()).append(csvSplitBy)
                         .append(publication.getAuthors().stream().map(Author::getName).collect(Collectors.joining(authorSplitBy)))

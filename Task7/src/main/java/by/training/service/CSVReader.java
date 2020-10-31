@@ -2,6 +2,7 @@ package by.training.service;
 
 import by.training.entity.Author;
 import by.training.entity.Publication;
+import by.training.entity.PublicationType;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,6 +15,9 @@ public class CSVReader {
     String line = "";
     String csvSplitBy = ",";
     String authorSplitBy = "\\|";
+    private BookFactory bookFactory = BookFactory.getInstance();
+    private MagazineFactory magazineFactory = MagazineFactory.getInstance();
+    private NewspaperFactory newspaperFactory = NewspaperFactory.getInstance();
 
     /**
      * Method for parsing csv file into ArrayList<Publication>
@@ -30,26 +34,40 @@ public class CSVReader {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
             while ((line = br.readLine()) != null) {
-                publication = new Publication();
 
                 // use comma as separator
                 String[] booksStringFromFile = line.split(csvSplitBy);
-                String[] authorsString = booksStringFromFile[5].split(authorSplitBy);
+                String[] authorsString = booksStringFromFile[6].split(authorSplitBy);
+                try {
+                    PublicationType.valueOf(booksStringFromFile[0]);//if type not found it won't create publication bellow
 
-                publication.setIsbnNumber(Long.parseLong(booksStringFromFile[0]));
-                publication.setTitle(booksStringFromFile[1]);
-                publication.setNumberOfPages(Integer.parseInt(booksStringFromFile[2]));
-                publication.setPublishingHouse(booksStringFromFile[3]);
-                publication.setYearOfPublishing(Integer.parseInt(booksStringFromFile[4]));
+                    publication = new Publication(PublicationType.BOOK);//default type
 
-                for (int i = 0; i < authorsString.length; i++) {
-                    author = new Author();
+                    if (booksStringFromFile[0].equals("BOOK")) {
+                        publication = bookFactory.createPublication();
+                    } else if (booksStringFromFile[0].equals("MAGAZINE")) {
+                        publication = magazineFactory.createPublication();
+                    } else if (booksStringFromFile[0].equals("NEWSPAPER")) {
+                        publication = newspaperFactory.createPublication();
+                    }
 
-                    author.setName(authorsString[i]);
-                    publication.addAuthor(author);
+                    publication.setIsbnNumber(Long.parseLong(booksStringFromFile[1]));
+                    publication.setTitle(booksStringFromFile[2]);
+                    publication.setNumberOfPages(Integer.parseInt(booksStringFromFile[3]));
+                    publication.setPublishingHouse(booksStringFromFile[4]);
+                    publication.setYearOfPublishing(Integer.parseInt(booksStringFromFile[5]));
+
+                    for (int i = 0; i < authorsString.length; i++) {
+                        author = new Author();
+
+                        author.setName(authorsString[i]);
+                        publication.addAuthor(author);
+                    }
+
+                    publicationsList.add(publication);
+                } catch (IllegalArgumentException ex) {
+                    //nope
                 }
-
-                publicationsList.add(publication);
             }
         } catch (IOException e) {
             e.printStackTrace();

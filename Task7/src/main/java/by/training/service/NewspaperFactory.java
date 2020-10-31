@@ -19,7 +19,7 @@ public class NewspaperFactory extends PublicationFactory {
 
     @Override
     public Publication createPublication() {
-        return new Publication(PublicationType.BOOK);
+        return new Publication(PublicationType.NEWSPAPER);
     }
-    
+
 }
