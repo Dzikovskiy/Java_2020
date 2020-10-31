@@ -1,7 +1,7 @@
 package by.training.service;
 
 import by.training.entity.Author;
-import by.training.entity.Book;
+import by.training.entity.Publication;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,16 +13,16 @@ public class CSVWriter {
     String csvSplitBy = ",";
     String authorSplitBy = "|";
 
-    public void writeBookListToFile(ArrayList<Book> books) {
+    public void writePublicationListToFile(ArrayList<Publication> publications) {
 
         try (FileOutputStream outputStream = new FileOutputStream(csvFileName)) {
             StringBuilder builder = new StringBuilder();
 
-            for (Book book : books) {
-                builder.append(book.getIsbnNumber()).append(csvSplitBy).append(book.getTitle()).append(csvSplitBy)
-                        .append(book.getNumberOfPages()).append(csvSplitBy).append(book.getPublishingHouse())
-                        .append(csvSplitBy).append(book.getYearOfPublishing()).append(csvSplitBy)
-                        .append(book.getAuthors().stream().map(Author::getName).collect(Collectors.joining(authorSplitBy)))
+            for (Publication publication : publications) {
+                builder.append(publication.getIsbnNumber()).append(csvSplitBy).append(publication.getTitle()).append(csvSplitBy)
+                        .append(publication.getNumberOfPages()).append(csvSplitBy).append(publication.getPublishingHouse())
+                        .append(csvSplitBy).append(publication.getYearOfPublishing()).append(csvSplitBy)
+                        .append(publication.getAuthors().stream().map(Author::getName).collect(Collectors.joining(authorSplitBy)))
                         .append(",\n");
 
             }

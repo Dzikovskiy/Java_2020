@@ -1,11 +1,11 @@
 package by.training.specification;
 
-import by.training.entity.Book;
+import by.training.entity.Publication;
 
 import java.util.Comparator;
 
-public class SortByTitle extends BookSpecification {
+public class SortByTitle extends PublicationSpecification {
     public SortByTitle() {
-        super(null, Comparator.comparing(Book::getTitle));
+        super(null, Comparator.comparing(Publication::getTitle));
     }
 }

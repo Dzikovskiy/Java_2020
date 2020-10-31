@@ -3,16 +3,18 @@ package by.training.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
+public class Publication {
     private long isbnNumber;// like id for every book
     private String title;
     private int numberOfPages;
     private String publishingHouse;
     private int yearOfPublishing;
     private List<Author> authors;
+    private PublicationType type;
 
-    public Book() {
+    public Publication(PublicationType type) {
         this.authors = new ArrayList<>();
+        this.type = type;
     }
 
     public void addAuthor(Author author) {
@@ -74,14 +76,14 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Book book = (Book) o;
+        Publication publication = (Publication) o;
 
-        if (isbnNumber != book.isbnNumber) return false;
-        if (numberOfPages != book.numberOfPages) return false;
-        if (yearOfPublishing != book.yearOfPublishing) return false;
-        if (!title.equals(book.title)) return false;
-        if (!authors.equals(book.authors)) return false;
-        return publishingHouse.equals(book.publishingHouse);
+        if (isbnNumber != publication.isbnNumber) return false;
+        if (numberOfPages != publication.numberOfPages) return false;
+        if (yearOfPublishing != publication.yearOfPublishing) return false;
+        if (!title.equals(publication.title)) return false;
+        if (!authors.equals(publication.authors)) return false;
+        return publishingHouse.equals(publication.publishingHouse);
     }
 
     @Override
@@ -97,7 +99,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "Publication{" +
                 "isbnNumber=" + isbnNumber +
                 ", title='" + title + '\'' +
                 ", numberOfPages=" + numberOfPages +
