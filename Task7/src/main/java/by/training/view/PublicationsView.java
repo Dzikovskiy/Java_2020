@@ -31,16 +31,14 @@ public class PublicationsView {
         System.out.println("\nEnter type");
         PublicationType type = PublicationType.valueOf(scanner.nextLine());
         if (type == PublicationType.BOOK) {
-            publication.of(bookFactory.createPublication());
+           publication = publication.of(bookFactory.createPublication());
         } else if (type == PublicationType.MAGAZINE) {
-            publication.of(magazineFactory.createPublication());
+            publication = publication.of(magazineFactory.createPublication());
         } else if (type == PublicationType.NEWSPAPER) {
-            publication.of(newspaperFactory.createPublication());
+            publication = publication.of(newspaperFactory.createPublication());
         }
 
         if (publication.isPresent()) {
-            System.out.print("Enter isbn: ");
-            publication.get().setIsbnNumber(Long.parseLong(scanner.nextLine()));
             System.out.println("Enter title: ");
             publication.get().setTitle(scanner.nextLine());
             System.out.println("Enter number of pages");

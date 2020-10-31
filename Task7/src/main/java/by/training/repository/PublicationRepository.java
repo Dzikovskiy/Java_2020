@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class PublicationRepository implements IRepository<Publication> {
 
     BookListDao publicationListDao = new BookListDao();
+    private static long isbn = 0;
 
     @Override
     public ArrayList<Publication> getAll() {
@@ -20,6 +21,7 @@ public class PublicationRepository implements IRepository<Publication> {
 
     @Override
     public void save(Publication publication) {
+        publication.setIsbnNumber(isbn++);
         publicationListDao.addBook(publication);
     }
 
