@@ -166,3 +166,54 @@
 2020-11-01 18:23:06.860 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
 2020-11-01 18:23:06.860 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
 2020-11-01 18:23:06.863 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,
+2020-11-01 20:58:59.864 [main] INFO  by.training.Main - Program start
+2020-11-01 20:58:59.888 [main] DEBUG by.training.service.CSVReader - Line from file: BOOK,123123123123,AHobbit,1263,Popury,1976,Tolkin|jr Tolkin,
+2020-11-01 20:58:59.888 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=123123123123, title='AHobbit', numberOfPages=1263, publishingHouse='Popury', yearOfPublishing=1976, authors=[Author{name='Tolkin'}, Author{name='jr Tolkin'}], type=BOOK}
+2020-11-01 20:58:59.888 [main] DEBUG by.training.service.CSVReader - Line from file: MAGAZINE,745644644553,CBGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 20:58:59.888 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='CBGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=MAGAZINE}
+2020-11-01 20:58:59.888 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 20:58:59.888 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
+2020-11-01 20:58:59.888 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,
+2020-11-01 20:59:35.548 [main] INFO  by.training.Main - Program start
+2020-11-01 20:59:35.560 [main] DEBUG by.training.service.CSVReader - Line from file: BOOK,123123123123,AHobbit,1263,Popury,1976,Tolkin|jr Tolkin,
+2020-11-01 20:59:35.560 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=123123123123, title='AHobbit', numberOfPages=1263, publishingHouse='Popury', yearOfPublishing=1976, authors=[Author{name='Tolkin'}, Author{name='jr Tolkin'}], type=BOOK}
+2020-11-01 20:59:35.560 [main] DEBUG by.training.service.CSVReader - Line from file: MAGAZINE,745644644553,CBGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 20:59:35.560 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='CBGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=MAGAZINE}
+2020-11-01 20:59:35.560 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 20:59:35.560 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
+2020-11-01 20:59:35.560 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,
+2020-11-01 21:00:21.130 [main] INFO  by.training.Main - Program start
+2020-11-01 21:00:21.142 [main] DEBUG by.training.service.CSVReader - Line from file: BOOK,123123123123,AHobbit,1263,Popury,1976,Tolkin|jr Tolkin,
+2020-11-01 21:00:21.146 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=123123123123, title='AHobbit', numberOfPages=1263, publishingHouse='Popury', yearOfPublishing=1976, authors=[Author{name='Tolkin'}, Author{name='jr Tolkin'}], type=BOOK}
+2020-11-01 21:00:21.146 [main] DEBUG by.training.service.CSVReader - Line from file: MAGAZINE,745644644553,CBGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 21:00:21.146 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='CBGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=MAGAZINE}
+2020-11-01 21:00:21.146 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 21:00:21.146 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
+2020-11-01 21:00:21.146 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,
+2020-11-01 21:00:38.884 [main] DEBUG by.training.service.CSVReader - Line from file: BOOK,123123123123,AHobbit,1263,Popury,1976,Tolkin|jr Tolkin,
+2020-11-01 21:00:38.884 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=123123123123, title='AHobbit', numberOfPages=1263, publishingHouse='Popury', yearOfPublishing=1976, authors=[Author{name='Tolkin'}, Author{name='jr Tolkin'}], type=BOOK}
+2020-11-01 21:00:38.888 [main] DEBUG by.training.service.CSVReader - Line from file: MAGAZINE,745644644553,CBGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 21:00:38.888 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='CBGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=MAGAZINE}
+2020-11-01 21:00:38.888 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 21:00:38.888 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
+2020-11-01 21:00:38.888 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,
+2020-11-01 21:01:09.772 [main] DEBUG by.training.dao.BookListDao - Publication wrote to file: Publication{isbnNumber=0, title='title', numberOfPages=5, publishingHouse='p', yearOfPublishing=2020, authors=[Author{name='HE'}], type=BOOK}
+2020-11-01 21:02:13.973 [main] DEBUG by.training.dao.BookListDao - Publication wrote to file: Publication{isbnNumber=1, title='T', numberOfPages=2, publishingHouse='PP', yearOfPublishing=2020, authors=[Author{name='SHE'}], type=BOOK}
+2020-11-01 21:02:26.113 [main] DEBUG by.training.dao.BookListDao - Publication removed by isbn: 1
+2020-11-01 22:32:04.006 [main] INFO  by.training.Main - Program start
+2020-11-01 22:32:04.018 [main] DEBUG by.training.service.CSVReader - Line from file: BOOK,123123123123,AHobbit,1263,Popury,1976,Tolkin|jr Tolkin,
+2020-11-01 22:32:04.022 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=123123123123, title='AHobbit', numberOfPages=1263, publishingHouse='Popury', yearOfPublishing=1976, authors=[Author{name='Tolkin'}, Author{name='jr Tolkin'}], type=BOOK}
+2020-11-01 22:32:04.022 [main] DEBUG by.training.service.CSVReader - Line from file: MAGAZINE,745644644553,CBGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 22:32:04.022 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='CBGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=MAGAZINE}
+2020-11-01 22:32:04.022 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 22:32:04.022 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
+2020-11-01 22:32:04.022 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,
+2020-11-01 22:32:08.900 [main] DEBUG by.training.service.CSVReader - Line from file: BOOK,123123123123,AHobbit,1263,Popury,1976,Tolkin|jr Tolkin,
+2020-11-01 22:32:08.900 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=123123123123, title='AHobbit', numberOfPages=1263, publishingHouse='Popury', yearOfPublishing=1976, authors=[Author{name='Tolkin'}, Author{name='jr Tolkin'}], type=BOOK}
+2020-11-01 22:32:08.900 [main] DEBUG by.training.service.CSVReader - Line from file: MAGAZINE,745644644553,CBGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 22:32:08.900 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='CBGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=MAGAZINE}
+2020-11-01 22:32:08.900 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 22:32:08.900 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
+2020-11-01 22:32:08.900 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,
+2020-11-01 22:32:29.588 [main] DEBUG by.training.dao.BookListDao - Publication wrote to file: Publication{isbnNumber=0, title='t', numberOfPages=2, publishingHouse='p', yearOfPublishing=2020, authors=[Author{name='t'}], type=BOOK}
+2020-11-01 22:32:59.935 [main] DEBUG by.training.dao.BookListDao - Publication removed by isbn: 0

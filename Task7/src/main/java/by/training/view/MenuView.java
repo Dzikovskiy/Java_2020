@@ -3,6 +3,7 @@ package by.training.view;
 import by.training.entity.Publication;
 import by.training.entity.PublicationType;
 import by.training.repository.PublicationRepository;
+import by.training.service.PublicationsListener;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,6 +14,8 @@ public class MenuView {
     PublicationRepository repository = new PublicationRepository();
     ArrayList<Publication> publications;
     Publication publication;
+    PublicationType type;
+    int year;
 
     public void menu() {
         while (true) {
@@ -24,7 +27,8 @@ public class MenuView {
             System.out.println("6. Find publication by ISBN");
             System.out.println("7. Sort publications by title");
             System.out.println("8. Sort publications by title and year");
-            System.out.println("9. Exit");
+            System.out.println("9. Add observer");
+            System.out.println("10. Exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -40,8 +44,14 @@ public class MenuView {
                 case 4:
                     System.out.print("\nEnter isbn: ");
                     long isbn = scanner.nextLong();
-                    publication = new Publication(PublicationType.BOOK);
+                    System.out.println("Type: ");
+                    scanner.nextLine();
+                    type = PublicationType.valueOf(scanner.nextLine());
+                    System.out.println("Year: ");
+                    year = scanner.nextInt();
+                    publication = new Publication(type);
                     publication.setIsbnNumber(isbn);
+                    publication.setYearOfPublishing(year);
                     repository.delete(publication);
                     break;
                 case 5:
@@ -66,6 +76,15 @@ public class MenuView {
                     repository.saveAll(publications);
                     break;
                 case 9:
+                    scanner.nextLine();
+                    System.out.print("\nEnter type:");
+                    type = PublicationType.valueOf(scanner.nextLine());
+                    System.out.print("\nEnter year: ");
+                    year = scanner.nextInt();
+                    PublicationsListener listener = new PublicationsListener(year, type);
+                    repository.addListener(listener);
+                    break;
+                case 10:
                     return;
                 default:
                     System.out.println("Wrong command");
