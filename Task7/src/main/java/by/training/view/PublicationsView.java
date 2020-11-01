@@ -17,7 +17,6 @@ public class PublicationsView {
     private MagazineFactory magazineFactory = MagazineFactory.getInstance();
     private NewspaperFactory newspaperFactory = NewspaperFactory.getInstance();
 
-
     public void printBooks(ArrayList<Publication> publications) {
         if (publications != null) {
             publications.forEach(System.out::println);
