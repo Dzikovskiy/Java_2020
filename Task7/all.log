@@ -159,3 +159,10 @@
 2020-11-01 18:02:56.896 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
 2020-11-01 18:02:56.896 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
 2020-11-01 18:02:56.896 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,
+2020-11-01 18:23:06.860 [main] DEBUG by.training.service.CSVReader - Line from file: BOOK,123123123123,AHobbit,1263,Popury,1976,Tolkin|jr Tolkin,
+2020-11-01 18:23:06.860 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=123123123123, title='AHobbit', numberOfPages=1263, publishingHouse='Popury', yearOfPublishing=1976, authors=[Author{name='Tolkin'}, Author{name='jr Tolkin'}], type=BOOK}
+2020-11-01 18:23:06.860 [main] DEBUG by.training.service.CSVReader - Line from file: MAGAZINE,745644644553,CBGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 18:23:06.860 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='CBGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=MAGAZINE}
+2020-11-01 18:23:06.860 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER,745644644553,BGarry potter,763,London press,2000,Joahn Rouling,
+2020-11-01 18:23:06.860 [main] DEBUG by.training.service.CSVReader - Publication added to list: Publication{isbnNumber=745644644553, title='BGarry potter', numberOfPages=763, publishingHouse='London press', yearOfPublishing=2000, authors=[Author{name='Joahn Rouling'}], type=NEWSPAPER}
+2020-11-01 18:23:06.863 [main] DEBUG by.training.service.CSVReader - Line from file: NEWSPAPER33,745644644553,BGarry potter,763,London press,2004,Joahn Rouling,

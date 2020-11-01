@@ -41,7 +41,7 @@ public class CSVReaderTest {
         author = new Author();
         author.setName("jr Tolkin");
         publication.addAuthor(author);
-        
+
         publications = reader.readBooksFormCSVFile(csvFileName);
 
         Assert.assertEquals(publication, publications.get(0));
