@@ -3,24 +3,24 @@ package by.training.entity;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class MatrixImpl implements Matrix {
-    private static MatrixImpl instance;
+public class MatrixLockImpl implements Matrix {
+    private static MatrixLockImpl instance;
     private final static Lock lock1 = new ReentrantLock();
     private final Lock lock2 = new ReentrantLock();
     private int[][] matrix;
     private int counter = 0;
 
-    private MatrixImpl() {
+    private MatrixLockImpl() {
     }
 
     public void initializeMatrix(int size) {
         matrix = new int[size][size];
     }
 
-    public static MatrixImpl getInstance() {
+    public static MatrixLockImpl getInstance() {
         lock1.lock();
         if (instance == null) {
-            instance = new MatrixImpl();
+            instance = new MatrixLockImpl();
         }
         lock1.unlock();
         return instance;
