@@ -1,5 +1,8 @@
 package by.training.service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -9,7 +12,8 @@ import java.util.List;
 
 public class MatrixConfigReaderImpl implements MatrixConfigReader {
     private static final List<Integer> list = new ArrayList<>();
-    String PATH_TO_FILE = "src/main/resources/threadConfig";
+    private String PATH_TO_FILE = "src/main/resources/threadConfig";
+    private Logger logger = LogManager.getLogger();
 
     public MatrixConfigReaderImpl() {
         readValues();
@@ -39,6 +43,7 @@ public class MatrixConfigReaderImpl implements MatrixConfigReader {
                     list.add(Integer.parseInt(s));
                 }
             }
+            logger.debug("Values red form file: " + list.get(0) + " " + list.get(1));
         } catch (IOException e) {
             e.printStackTrace();
         }

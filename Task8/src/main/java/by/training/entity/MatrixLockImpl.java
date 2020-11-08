@@ -1,5 +1,8 @@
 package by.training.entity;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -9,6 +12,8 @@ public class MatrixLockImpl implements Matrix {
     private final Lock lock2 = new ReentrantLock();
     private int[][] matrix;
     private int counter = 0;
+    private static MatrixState state;
+    private Logger logger = LogManager.getLogger();
 
     private MatrixLockImpl() {
     }
@@ -21,6 +26,7 @@ public class MatrixLockImpl implements Matrix {
         lock1.lock();
         if (instance == null) {
             instance = new MatrixLockImpl();
+            state = new MatrixEmptyState();
         }
         lock1.unlock();
         return instance;
@@ -32,21 +38,16 @@ public class MatrixLockImpl implements Matrix {
         if (counter < matrix.length) {
             matrix[counter][counter] = value;
             counter++;
-            System.out.println("thread: " + value);
+            state = new MatrixInProgressState();
+            logger.debug("Thread inserted value: " + value);
+        } else {
+            state = new MatrixFilledState(matrix);
         }
         lock2.unlock();
     }
 
-
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder();
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
-                result.append("[").append(anInt).append("]");
-            }
-            result.append("\n");
-        }
-        return result.toString();
+        return state.matrixToString();
     }
 }

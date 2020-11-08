@@ -5,11 +5,16 @@ import by.training.entity.MatrixSemaphoreImpl;
 import by.training.service.MatrixConfigReaderImpl;
 import by.training.threads.CyclicBarrierMatrixPrintService;
 import by.training.threads.MatrixUpdaterThread;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.concurrent.CyclicBarrier;
 
 public class App {
     public static void main(String[] args) throws InterruptedException {
+        Logger logger = LogManager.getLogger();
+        logger.info("Program start");
+
         MatrixConfigReaderImpl reader = new MatrixConfigReaderImpl();
 
         //matrix initialization
@@ -38,7 +43,6 @@ public class App {
             Thread thread = new Thread(matrixUpdaterThread);
             thread.start();
         }
-
 
     }
 }

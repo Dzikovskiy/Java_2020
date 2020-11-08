@@ -1,5 +1,8 @@
 package by.training.entity;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.concurrent.Semaphore;
 
 public class MatrixSemaphoreImpl implements Matrix {
@@ -8,6 +11,8 @@ public class MatrixSemaphoreImpl implements Matrix {
     private int counter = 0;
     private final static Semaphore semaphore1 = new Semaphore(1);
     private final Semaphore semaphore2 = new Semaphore(1);
+    private static MatrixState state;
+    private Logger logger = LogManager.getLogger();
 
     private MatrixSemaphoreImpl() {
     }
@@ -21,6 +26,7 @@ public class MatrixSemaphoreImpl implements Matrix {
             semaphore1.acquire();
             if (instance == null) {
                 instance = new MatrixSemaphoreImpl();
+                state = new MatrixEmptyState();
             }
 
         } catch (InterruptedException e) {
@@ -38,7 +44,10 @@ public class MatrixSemaphoreImpl implements Matrix {
             if (counter < matrix.length) {
                 matrix[counter][counter] = value;
                 counter++;
-                System.out.println("thread: " + value);
+                state = new MatrixInProgressState();
+                logger.debug("Thread inserted value: " + value);
+            } else {
+                state = new MatrixFilledState(matrix);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -47,16 +56,8 @@ public class MatrixSemaphoreImpl implements Matrix {
         semaphore2.release();
     }
 
-
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder();
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
-                result.append("[").append(anInt).append("]");
-            }
-            result.append("\n");
-        }
-        return result.toString();
+        return state.matrixToString();
     }
 }
