@@ -1,6 +1,7 @@
 package by.training;
 
 import by.training.entity.MatrixLockImpl;
+import by.training.entity.MatrixMutexImpl;
 import by.training.entity.MatrixSemaphoreImpl;
 import by.training.service.MatrixConfigReaderImpl;
 import by.training.threads.CyclicBarrierMatrixPrintService;
@@ -40,6 +41,19 @@ public class App {
 
         for (int i = 0; i < reader.threadValue(); i++) {
             MatrixUpdaterThread matrixUpdaterThread = new MatrixUpdaterThread(MatrixSemaphoreImpl.getInstance(), i, cyclicBarrier);
+            Thread thread = new Thread(matrixUpdaterThread);
+            thread.start();
+        }
+
+        //third solution
+        MatrixMutexImpl matrixMutex = MatrixMutexImpl.getInstance();
+        matrixMutex.initializeMatrix(reader.matrixSize());
+
+        cyclicBarrier = new CyclicBarrier(reader.threadValue(),
+                new CyclicBarrierMatrixPrintService(matrixMutex));
+
+        for (int i = 0; i < reader.threadValue(); i++) {
+            MatrixUpdaterThread matrixUpdaterThread = new MatrixUpdaterThread(MatrixMutexImpl.getInstance(), i, cyclicBarrier);
             Thread thread = new Thread(matrixUpdaterThread);
             thread.start();
         }

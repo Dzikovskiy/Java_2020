@@ -432,3 +432,125 @@
 2020-11-08 21:15:51.905 [Thread-29] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
 2020-11-08 21:15:51.905 [Thread-27] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
 2020-11-08 21:15:51.905 [Thread-25] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.154 [main] INFO  by.training.App - Program start
+2020-11-08 23:01:45.171 [main] DEBUG by.training.service.MatrixConfigReaderImpl - Values red form file: 10 15
+2020-11-08 23:01:45.180 [Thread-0] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 0
+2020-11-08 23:01:45.183 [Thread-0] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.183 [Thread-4] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 4
+2020-11-08 23:01:45.183 [Thread-4] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.183 [Thread-5] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 5
+2020-11-08 23:01:45.184 [Thread-5] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.185 [Thread-7] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 7
+2020-11-08 23:01:45.185 [Thread-7] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.185 [Thread-3] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 3
+2020-11-08 23:01:45.186 [Thread-3] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.186 [Thread-2] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 2
+2020-11-08 23:01:45.186 [Thread-2] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.186 [Thread-8] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 8
+2020-11-08 23:01:45.186 [Thread-8] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.186 [Thread-1] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 1
+2020-11-08 23:01:45.187 [Thread-1] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.187 [Thread-6] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 6
+2020-11-08 23:01:45.187 [Thread-6] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.187 [Thread-9] DEBUG by.training.entity.MatrixLockImpl - Thread inserted value: 9
+2020-11-08 23:01:45.187 [Thread-9] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.187 [Thread-10] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.187 [Thread-12] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.187 [Thread-14] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.187 [Thread-11] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.187 [Thread-13] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.188 [Thread-13] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.188 [Thread-0] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.188 [Thread-5] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.188 [Thread-4] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.188 [Thread-7] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.188 [Thread-3] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.189 [Thread-2] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.189 [Thread-15] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 0
+2020-11-08 23:01:45.189 [Thread-1] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.190 [Thread-6] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.190 [Thread-8] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.192 [Thread-10] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.192 [Thread-12] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.192 [Thread-9] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.192 [Thread-15] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.192 [Thread-14] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.198 [Thread-16] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 1
+2020-11-08 23:01:45.198 [Thread-11] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.201 [Thread-16] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.202 [Thread-17] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 2
+2020-11-08 23:01:45.202 [Thread-17] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.202 [Thread-18] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 3
+2020-11-08 23:01:45.202 [Thread-18] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.202 [Thread-19] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 4
+2020-11-08 23:01:45.203 [Thread-19] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.203 [Thread-22] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 7
+2020-11-08 23:01:45.203 [Thread-22] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.203 [Thread-24] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 9
+2020-11-08 23:01:45.203 [Thread-24] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.203 [Thread-20] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 5
+2020-11-08 23:01:45.203 [Thread-20] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.203 [Thread-21] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 6
+2020-11-08 23:01:45.204 [Thread-23] DEBUG by.training.entity.MatrixSemaphoreImpl - Thread inserted value: 8
+2020-11-08 23:01:45.204 [Thread-21] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.204 [Thread-23] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.204 [Thread-27] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.204 [Thread-26] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.204 [Thread-25] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.204 [Thread-29] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.204 [Thread-28] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.204 [Thread-28] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.204 [Thread-15] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.204 [Thread-17] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.204 [Thread-16] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.205 [Thread-22] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.205 [Thread-19] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.205 [Thread-18] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.206 [Thread-21] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.206 [Thread-23] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.206 [Thread-27] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.207 [Thread-25] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.207 [Thread-26] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.207 [Thread-20] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.205 [Thread-24] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.207 [Thread-29] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.207 [Thread-30] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 0
+2020-11-08 23:01:45.208 [Thread-30] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.208 [Thread-31] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 1
+2020-11-08 23:01:45.208 [Thread-31] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.208 [Thread-32] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 2
+2020-11-08 23:01:45.208 [Thread-32] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.208 [Thread-33] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 3
+2020-11-08 23:01:45.209 [Thread-33] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.209 [Thread-34] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 4
+2020-11-08 23:01:45.209 [Thread-34] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.209 [Thread-35] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 5
+2020-11-08 23:01:45.209 [Thread-35] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.209 [Thread-36] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 6
+2020-11-08 23:01:45.209 [Thread-36] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.209 [Thread-37] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 7
+2020-11-08 23:01:45.209 [Thread-37] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.209 [Thread-38] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 8
+2020-11-08 23:01:45.210 [Thread-38] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.210 [Thread-39] DEBUG by.training.entity.MatrixMutexImpl - Thread inserted value: 9
+2020-11-08 23:01:45.210 [Thread-39] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.210 [Thread-41] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.210 [Thread-40] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.210 [Thread-42] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.210 [Thread-43] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.210 [Thread-44] DEBUG by.training.threads.MatrixUpdaterThread - Thread has tried to insert the value to matrix and now wait barrier
+2020-11-08 23:01:45.210 [Thread-44] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.210 [Thread-30] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.211 [Thread-31] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.211 [Thread-33] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.211 [Thread-34] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.211 [Thread-35] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.211 [Thread-32] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.212 [Thread-38] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.212 [Thread-37] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.212 [Thread-39] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.212 [Thread-36] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.213 [Thread-40] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.213 [Thread-43] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.213 [Thread-42] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
+2020-11-08 23:01:45.212 [Thread-41] DEBUG by.training.threads.MatrixUpdaterThread - Thread passed barrier
