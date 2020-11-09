@@ -46,6 +46,10 @@ public class MatrixLockImpl implements Matrix {
         lock2.unlock();
     }
 
+    public int getMatrixSize(){
+        return this.matrix.length;
+    }
+
     @Override
     public String toString() {
         return state.matrixToString();

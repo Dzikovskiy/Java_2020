@@ -45,6 +45,11 @@ public class MatrixMutexImpl implements Matrix {
         mutex2.unlock();
     }
 
+    public int getMatrixSize(){
+        return this.matrix.length;
+    }
+
+
     @Override
     public String toString() {
         return state.matrixToString();

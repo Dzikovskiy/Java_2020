@@ -3,6 +3,8 @@ package by.training.entity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.swing.text.html.Option;
+import java.util.Optional;
 import java.util.concurrent.Semaphore;
 
 public class MatrixSemaphoreImpl implements Matrix {
@@ -55,6 +57,11 @@ public class MatrixSemaphoreImpl implements Matrix {
 
         semaphore2.release();
     }
+
+    public int getMatrixSize() {
+        return this.matrix != null ? this.matrix.length : null;
+    }
+
 
     @Override
     public String toString() {
