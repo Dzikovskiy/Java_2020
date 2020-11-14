@@ -30,7 +30,7 @@ public class MatrixConfigReaderImpl implements MatrixConfigReader {
     }
 
     /**
-     * method that reads matrix size and quantity of by.training.threads separated by ","
+     * method that reads matrix size and quantity of threads separated by ","
      */
     @Override
     public void readValues() {
@@ -47,5 +47,13 @@ public class MatrixConfigReaderImpl implements MatrixConfigReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getPATH_TO_FILE() {
+        return PATH_TO_FILE;
+    }
+
+    public void setPATH_TO_FILE(String PATH_TO_FILE) {
+        this.PATH_TO_FILE = PATH_TO_FILE;
     }
 }
