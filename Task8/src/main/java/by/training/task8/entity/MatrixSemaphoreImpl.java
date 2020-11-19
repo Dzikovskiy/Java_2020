@@ -1,10 +1,8 @@
-package by.training.entity;
+package by.training.task8.entity;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.swing.text.html.Option;
-import java.util.Optional;
 import java.util.concurrent.Semaphore;
 
 public class MatrixSemaphoreImpl implements Matrix {

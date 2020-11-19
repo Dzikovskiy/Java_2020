@@ -1,39 +1,40 @@
-package by.training.entity;
+package by.training.task8.entity;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import sun.awt.Mutex;
 
-public class MatrixMutexImpl implements Matrix {
-    private static MatrixMutexImpl instance;
-    private final static Mutex mutex1 = new Mutex();
-    private final static Mutex mutex2 = new Mutex();
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
+public class MatrixLockImpl implements Matrix {
+    private static MatrixLockImpl instance;
+    private final static Lock lock1 = new ReentrantLock();
+    private final static Lock lock2 = new ReentrantLock();
     private int[][] matrix;
     private int counter = 0;
     private static MatrixState state;
-    private Logger logger = LogManager.getLogger();
+    private final Logger logger = LogManager.getLogger();
 
-    private MatrixMutexImpl() {
+    private MatrixLockImpl() {
     }
 
     public void initializeMatrix(int size) {
         matrix = new int[size][size];
     }
 
-    public static MatrixMutexImpl getInstance() {
-        mutex1.lock();
+    public static MatrixLockImpl getInstance() {
+        lock1.lock();
         if (instance == null) {
-            instance = new MatrixMutexImpl();
+            instance = new MatrixLockImpl();
             state = new MatrixEmptyState();
         }
-        mutex1.unlock();
+        lock1.unlock();
         return instance;
     }
 
     @Override
     public void insert(int value) {
-        mutex2.lock();
+        lock2.lock();
         if (counter < matrix.length) {
             matrix[counter][counter] = value;
             counter++;
@@ -42,13 +43,12 @@ public class MatrixMutexImpl implements Matrix {
         } else {
             state = new MatrixFilledState(matrix);
         }
-        mutex2.unlock();
+        lock2.unlock();
     }
 
     public int getMatrixSize(){
         return this.matrix.length;
     }
-
 
     @Override
     public String toString() {

@@ -1,6 +1,6 @@
-package by.training.threads;
+package by.training.task8.threads;
 
-import by.training.entity.Matrix;
+import by.training.task8.entity.Matrix;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -8,7 +8,6 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 public class MatrixUpdaterThread implements Runnable {
-
     private final Integer element;
     private Matrix matrix;
     private CyclicBarrier cyclicBarrier;

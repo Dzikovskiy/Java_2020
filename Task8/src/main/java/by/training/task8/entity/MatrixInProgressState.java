@@ -1,4 +1,4 @@
-package by.training.entity;
+package by.training.task8.entity;
 
 public class MatrixInProgressState extends MatrixState {
     @Override

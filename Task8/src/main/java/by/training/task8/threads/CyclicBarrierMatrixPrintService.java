@@ -1,6 +1,6 @@
-package by.training.threads;
+package by.training.task8.threads;
 
-import by.training.entity.Matrix;
+import by.training.task8.entity.Matrix;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

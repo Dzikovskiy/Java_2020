@@ -1,4 +1,4 @@
-package by.training.entity;
+package by.training.task8.entity;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

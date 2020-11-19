@@ -1,4 +1,4 @@
-package by.training.service;
+package by.training.task8.service;
 
 public interface MatrixConfigReader {
     int threadValue();

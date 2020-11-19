@@ -1,11 +1,11 @@
-package by.training;
+package by.training.task8;
 
-import by.training.entity.MatrixLockImpl;
-import by.training.entity.MatrixMutexImpl;
-import by.training.entity.MatrixSemaphoreImpl;
-import by.training.service.MatrixConfigReaderImpl;
-import by.training.threads.CyclicBarrierMatrixPrintService;
-import by.training.threads.MatrixUpdaterThread;
+import by.training.task8.entity.MatrixLockImpl;
+import by.training.task8.entity.MatrixMutexImpl;
+import by.training.task8.entity.MatrixSemaphoreImpl;
+import by.training.task8.service.MatrixConfigReaderImpl;
+import by.training.task8.threads.CyclicBarrierMatrixPrintService;
+import by.training.task8.threads.MatrixUpdaterThread;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

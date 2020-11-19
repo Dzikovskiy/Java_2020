@@ -1,4 +1,4 @@
-package by.training.service;
+package by.training.task8.service;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

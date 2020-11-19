@@ -1,40 +1,39 @@
-package by.training.entity;
+package by.training.task8.entity;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sun.awt.Mutex;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+public class MatrixMutexImpl implements Matrix {
+    private static MatrixMutexImpl instance;
+    private final static Mutex mutex1 = new Mutex();
+    private final static Mutex mutex2 = new Mutex();
 
-public class MatrixLockImpl implements Matrix {
-    private static MatrixLockImpl instance;
-    private final static Lock lock1 = new ReentrantLock();
-    private final static Lock lock2 = new ReentrantLock();
     private int[][] matrix;
     private int counter = 0;
     private static MatrixState state;
-    private final Logger logger = LogManager.getLogger();
+    private Logger logger = LogManager.getLogger();
 
-    private MatrixLockImpl() {
+    private MatrixMutexImpl() {
     }
 
     public void initializeMatrix(int size) {
         matrix = new int[size][size];
     }
 
-    public static MatrixLockImpl getInstance() {
-        lock1.lock();
+    public static MatrixMutexImpl getInstance() {
+        mutex1.lock();
         if (instance == null) {
-            instance = new MatrixLockImpl();
+            instance = new MatrixMutexImpl();
             state = new MatrixEmptyState();
         }
-        lock1.unlock();
+        mutex1.unlock();
         return instance;
     }
 
     @Override
     public void insert(int value) {
-        lock2.lock();
+        mutex2.lock();
         if (counter < matrix.length) {
             matrix[counter][counter] = value;
             counter++;
@@ -43,12 +42,13 @@ public class MatrixLockImpl implements Matrix {
         } else {
             state = new MatrixFilledState(matrix);
         }
-        lock2.unlock();
+        mutex2.unlock();
     }
 
     public int getMatrixSize(){
         return this.matrix.length;
     }
+
 
     @Override
     public String toString() {
