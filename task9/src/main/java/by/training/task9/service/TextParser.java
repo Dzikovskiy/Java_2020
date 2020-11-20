@@ -1,22 +1,28 @@
 package by.training.task9.service;
 
+import by.training.task9.entity.CompoundCharacter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class TextParser<T> {
     private TextParser<T> nextTextParser;
 
-    public TextParser<T> setNext(TextParser<T> parser) {
+    public void setNext(TextParser<T> parser) {
         this.nextTextParser = parser;
-        return parser;
     }
 
-    public void writeManager(String s) {
-        write(s);
+    public ArrayList<CompoundCharacter> parseManager(CompoundCharacter compoundCharacter) {
+        ArrayList<CompoundCharacter> list = parse(compoundCharacter);
         if (nextTextParser != null) {
-            nextTextParser.writeManager(s);
+            for(CompoundCharacter character: list){
+                nextTextParser.parseManager(character);
+            }
         }
+        return list;
+
     }
 
-    public void write(String s) {
-        System.out.println(s);
-    }
+    public abstract ArrayList<CompoundCharacter> parse(CompoundCharacter compoundCharacter);
 
 }
