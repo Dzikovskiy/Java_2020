@@ -21,7 +21,7 @@ public class App {
         senParser.setNext(lexParser);
         lexParser.setNext(charParser);
 
-        parser.setCompoundCharacterComparator(Comparator.comparing(CompoundCharacter::getCharacters).reversed());
+        parser.setCompoundCharacterComparator(Comparator.comparingInt(CompoundCharacter::getCharactersSize).reversed());
 
 
         CompoundCharacter compoundCharacter = new CompoundCharacter();
