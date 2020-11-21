@@ -16,11 +16,10 @@ public abstract class TextParser<T> {
         ArrayList<CompoundCharacter> list = parse(compoundCharacter);
         if (nextTextParser != null) {
             for(CompoundCharacter character: list){
-                nextTextParser.parseManager(character);
+              character.setCharacterList(  nextTextParser.parseManager(character));
             }
         }
         return list;
-
     }
 
     public abstract ArrayList<CompoundCharacter> parse(CompoundCharacter compoundCharacter);

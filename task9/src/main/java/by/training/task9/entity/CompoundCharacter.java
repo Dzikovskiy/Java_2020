@@ -3,7 +3,7 @@ package by.training.task9.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompoundCharacter extends BaseCharacter{
+public class CompoundCharacter extends BaseCharacter {
     private List<CompoundCharacter> characterList = new ArrayList<>();
 
     public List<CompoundCharacter> getCharacterList() {
@@ -16,8 +16,20 @@ public class CompoundCharacter extends BaseCharacter{
 
     @Override
     public String toString() {
-        return "CompoundCharacter{" +
-                "characterList=" + characterList +
-                '}';
+        return characterList.size() > 0 ? characterList.toString() : getCharacters();
+
+    }
+
+    public String getChildCharacters() {
+        StringBuilder builder = new StringBuilder();
+        if (characterList.size() > 0) {
+            for (CompoundCharacter compoundCharacter : characterList) {
+                builder.append(compoundCharacter.getChildCharacters()).append(" ");
+            }
+
+            return builder.toString();
+        } else {
+            return getCharacters();
+        }
     }
 }

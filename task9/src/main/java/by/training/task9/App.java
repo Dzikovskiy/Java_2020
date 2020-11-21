@@ -2,12 +2,12 @@ package by.training.task9;
 
 import by.training.task9.entity.CompoundCharacter;
 import by.training.task9.service.ParagraphParser;
+import by.training.task9.service.SentenceParser;
 import by.training.task9.service.TextParser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
@@ -15,6 +15,8 @@ public class App {
         logger.info("Program start");
 
         TextParser<String> parser = new ParagraphParser();
+        TextParser<String> senParser = new SentenceParser();
+        parser.setNext(senParser);
 
 
         CompoundCharacter compoundCharacter = new CompoundCharacter();
@@ -30,10 +32,9 @@ public class App {
                 "layout.\n");
         ArrayList<CompoundCharacter> list = parser.parseManager(compoundCharacter);
 
-        System.out.println(list);
-
-
-
+        for (CompoundCharacter character : list) {
+            System.out.print(character.getChildCharacters());
+        }
 
     }
 }
