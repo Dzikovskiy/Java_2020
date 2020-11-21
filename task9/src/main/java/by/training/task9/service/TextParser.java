@@ -7,6 +7,7 @@ import java.util.List;
 
 public abstract class TextParser<T> {
     private TextParser<T> nextTextParser;
+    private String regex;
 
     public void setNext(TextParser<T> parser) {
         this.nextTextParser = parser;

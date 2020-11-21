@@ -1,9 +1,7 @@
 package by.training.task9;
 
 import by.training.task9.entity.CompoundCharacter;
-import by.training.task9.service.ParagraphParser;
-import by.training.task9.service.SentenceParser;
-import by.training.task9.service.TextParser;
+import by.training.task9.service.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,14 +14,18 @@ public class App {
 
         TextParser<String> parser = new ParagraphParser();
         TextParser<String> senParser = new SentenceParser();
+        TextParser<String> lexParser = new LexemeParser();
+        TextParser<String> charParser = new CharacterParser();
         parser.setNext(senParser);
+        senParser.setNext(lexParser);
+        lexParser.setNext(charParser);
 
 
         CompoundCharacter compoundCharacter = new CompoundCharacter();
-        compoundCharacter.setCharacters("\tIt has survived not only five centuries, but also the leap into electronic\n" +
-                "typesetting, remaining essentially unchanged. It was popularised in the with the\n" +
+        compoundCharacter.setCharacters("    It has survived not only five centuries, but also the leap into electronic\n" +
+                "typesetting, remaining essentially unchanged... It was popularised in the with the\n" +
                 "release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
-                "desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n" +
+                "desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum!\n" +
                 "\tIt is a long established fact that a reader will be distracted by the readable\n" +
                 "content of a page when looking at its layout. The point of using Ipsum is that it has a\n" +
                 "more-or-less normal distribution of letters, as opposed to using 'Content here, content\n" +
@@ -33,7 +35,10 @@ public class App {
         ArrayList<CompoundCharacter> list = parser.parseManager(compoundCharacter);
 
         for (CompoundCharacter character : list) {
-            System.out.print(character.getChildCharacters());
+            System.out.print(character.getChildCharacters()
+                    .replaceAll("[ ]{2,}", "^")
+                    .replace(" ", "")
+                    .replace("^", " "));
         }
 
     }

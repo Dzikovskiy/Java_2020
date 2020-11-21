@@ -16,7 +16,7 @@ public class CompoundCharacter extends BaseCharacter {
 
     @Override
     public String toString() {
-        return characterList.size() > 0 ? characterList.toString() : getCharacters();
+        return characterList.size() > 0 ? getChildCharacters() : getCharacters();
 
     }
 
