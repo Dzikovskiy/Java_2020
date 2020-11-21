@@ -17,4 +17,8 @@ public class BaseCharacter {
                 "characters='" + characters + '\'' +
                 '}';
     }
+
+    public int getCharactersSize(){
+        return this.characters.length();
+    }
 }

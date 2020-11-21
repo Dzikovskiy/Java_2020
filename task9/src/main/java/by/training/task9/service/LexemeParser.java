@@ -5,7 +5,7 @@ import by.training.task9.entity.CompoundCharacter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LexemeParser extends TextParser<String>{
+public class LexemeParser extends TextParser<String> {
     private final String regex = "\\s";
 
     @Override

@@ -32,4 +32,19 @@ public class CompoundCharacter extends BaseCharacter {
             return getCharacters();
         }
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CompoundCharacter)) return false;
+
+        CompoundCharacter that = (CompoundCharacter) o;
+
+        return characterList.equals(that.characterList);
+    }
+
+    @Override
+    public int hashCode() {
+        return characterList.hashCode();
+    }
 }

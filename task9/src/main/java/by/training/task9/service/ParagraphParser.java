@@ -7,6 +7,7 @@ import java.util.List;
 
 public class ParagraphParser extends TextParser<String> {
     private final String regex = "\\t| {4}";
+    
 
     @Override
     public ArrayList<CompoundCharacter> parse(CompoundCharacter characters) {
