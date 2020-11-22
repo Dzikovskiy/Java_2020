@@ -1,6 +1,7 @@
 package by.training.task9.entity;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class CompoundCharacter extends BaseCharacter {
@@ -47,4 +48,6 @@ public class CompoundCharacter extends BaseCharacter {
     public int hashCode() {
         return characterList.hashCode();
     }
+
+
 }

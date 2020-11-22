@@ -18,12 +18,13 @@ public abstract class TextParser<T> {
 
     public ArrayList<CompoundCharacter> parseManager(CompoundCharacter compoundCharacter) {
         ArrayList<CompoundCharacter> list = parse(compoundCharacter);
-        if (this.compoundCharacterComparator != null) {
-           list = sortBySpecification(list);
-        }
+
         if (nextTextParser != null) {
             for (CompoundCharacter character : list) {
                 character.setCharacterList(nextTextParser.parseManager(character));
+            }
+            if (this.compoundCharacterComparator != null) {
+                list = sortBySpecification(list);
             }
         }
         return list;
