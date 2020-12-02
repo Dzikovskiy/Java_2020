@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+    <device id="1">
+        <name>gtx570</name>
+        <origin>USA</origin>
+        <price>100</price>
+        <critical>true</critical>
+        <type>
+            <groups>
+                <group>
+                    MULTIMEDIA
+                </group>
+                <group>
+                    IO
+                </group>
+            </groups>
+            <ports>
+                <port>
+                    COM
+                </port>
+                <port>
+                    USB
+                </port>
+            </ports>
+            <power>500</power>
+            <fan>true</fan>
+            <peripheral>false</peripheral>
+        </type>
+        <type>
+            <group>
+                MULTIMEDIA
+            </group>
+        </type>
+    </device>
+</devices>
