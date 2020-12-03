@@ -6,8 +6,8 @@
                 <xs:element name="device" maxOccurs="unbounded" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element type="xs:string" name="name"/>
-                            <xs:element type="xs:string" name="origin"/>
+                            <xs:element type="nonEmptyString" name="name" />
+                            <xs:element type="nonEmptyString" name="origin"/>
                             <xs:element name="price" default="0">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:integer">
@@ -44,10 +44,16 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute type="xs:integer" name="id"/>
+                        <xs:attribute type="xs:integer" name="id" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
+
     </xs:element>
+    <xs:simpleType name="nonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
