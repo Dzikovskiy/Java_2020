@@ -1,9 +1,6 @@
 package by.training.task2_4.service;
 
-import by.training.task2_4.entity.Device;
-import by.training.task2_4.entity.FanType;
-import by.training.task2_4.entity.PowerType;
-import by.training.task2_4.entity.Type;
+import by.training.task2_4.entity.*;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -63,6 +60,18 @@ public class SaxParser {
             if (qName.equalsIgnoreCase("group")) {
                 bGroup = true;
             }
+            if (qName.equalsIgnoreCase("port")) {
+                bPort = true;
+            }
+            if (qName.equalsIgnoreCase("power")) {
+                bPower = true;
+            }
+            if (qName.equalsIgnoreCase("fan")) {
+                bFan = true;
+            }
+            if (qName.equalsIgnoreCase("peripheral")) {
+                bPeripheral = true;
+            }
 
         }
 
@@ -110,7 +119,7 @@ public class SaxParser {
                 bFan = false;
             }
             if (bPeripheral){
-                type = new FanType("peripheral",Boolean.parseBoolean(new String(ch, start, length).trim()));
+                type = new PeripheralType("peripheral",Boolean.parseBoolean(new String(ch, start, length).trim()));
                 types.add(type);
                 bPeripheral = false;
             }
