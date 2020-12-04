@@ -3,7 +3,6 @@ package by.training.task2_4.entity;
 import lombok.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 @Getter
 @Setter
@@ -15,7 +14,7 @@ public class Device {
     private String origin;
     private int price;
     private boolean critical;
-    private Date manufacture_date;
+    private String manufactureDate;
     private ArrayList<Type> types ;
 
 }
