@@ -2,6 +2,7 @@ package by.training.task2_4.view;
 
 import by.training.task2_4.entity.Device;
 import by.training.task2_4.service.DomParser;
+import by.training.task2_4.service.SaxParser;
 import by.training.task2_4.service.XMLValidator;
 import org.xml.sax.SAXException;
 
@@ -15,6 +16,7 @@ public class MenuView {
     private final String XMLPath = "src/main/resources/devices.xml";
     private final String XSDPath = "src/main/resources/devices.xsd";
     DomParser domParser = new DomParser();
+    SaxParser saxParser = new SaxParser();
     ArrayList<Device> devices = new ArrayList<>();
 
     public void menu()  {
@@ -47,7 +49,8 @@ public class MenuView {
                     System.out.println("Xml has been parsed with DOM correctly");
                     break;
                 case 3:
-
+                    devices = (ArrayList<Device>) saxParser.parseDevices(XMLPath);
+                    System.out.println("Xml has been parsed with SAX correctly");
                     break;
                 case 4:
 
