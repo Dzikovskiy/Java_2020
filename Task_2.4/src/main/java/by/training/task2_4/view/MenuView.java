@@ -19,13 +19,14 @@ public class MenuView {
     SaxParser saxParser = new SaxParser();
     ArrayList<Device> devices = new ArrayList<>();
 
-    public void menu()  {
+    public void menu() {
         while (true) {
             System.out.println("\n1. Verify xml by xsd");
-            System.out.println("2. Create Array from file");
-            System.out.println("3. Create Array from random numbers");
-            System.out.println("4. Print Array");
-            System.out.println("5. exit");
+            System.out.println("2. DOM");
+            System.out.println("3. SAX");
+            System.out.println("4. STAX");
+            System.out.println("5. Print");
+            System.out.println("6. exit");
 
             switch (scanner.nextInt()) {
                 case 1:
@@ -37,7 +38,7 @@ public class MenuView {
                     break;
                 case 2:
                     try {
-                         devices = (ArrayList<Device>) domParser.parseDevices(XMLPath);
+                        devices = (ArrayList<Device>) domParser.parseDevices(XMLPath);
 
                     } catch (ParserConfigurationException e) {
                         e.printStackTrace();
@@ -56,6 +57,9 @@ public class MenuView {
 
                     break;
                 case 5:
+                    devices.forEach(System.out::println);
+                    break;
+                case 6:
                     return;
                 default:
                     System.out.println("Wrong command !");
