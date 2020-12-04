@@ -4,8 +4,8 @@ import lombok.Builder;
 import lombok.ToString;
 
 @ToString
-public class PowerType extends Type{
-    private int power;
+public class PowerType extends Type {
+    private final int power;
 
     @Builder
     public PowerType(String name, int power) {

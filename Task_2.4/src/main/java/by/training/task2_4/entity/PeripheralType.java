@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @ToString
 public class PeripheralType extends Type {
-    private boolean isPeripheral;
+    private final boolean isPeripheral;
 
     @Builder
     public PeripheralType(String name, boolean isPeripheral) {

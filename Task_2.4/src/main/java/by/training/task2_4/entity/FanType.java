@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @ToString
 public class FanType extends Type {
-    private boolean isContainsFan;
+    private final boolean isContainsFan;
 
     @Builder
     public FanType(String name, boolean isContainsFan) {

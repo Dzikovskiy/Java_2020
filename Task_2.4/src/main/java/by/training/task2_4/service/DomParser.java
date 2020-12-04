@@ -16,12 +16,10 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DomParser {
-    public ArrayList<Device> parseDevices(String xmlPath) throws ParserConfigurationException, IOException, SAXException {
-        if(!XMLValidator.validateXMLSchema(xmlPath.replace("xml","xsd"),xmlPath)){
-            throw new org.xml.sax.SAXException("Error while validating");
-        }
+    public List<Device> parseDevices(String xmlPath) throws ParserConfigurationException, IOException, SAXException {
         ArrayList<Device> devices = new ArrayList<>();
         Device device;
 
@@ -29,11 +27,12 @@ public class DomParser {
 
         DocumentBuilder builder = factory.newDocumentBuilder();
 
-        Document document = builder.parse(new File("src/main/resources/devices.xml"));
+        Document document = builder.parse(new File(xmlPath));
 
-        NodeList nodeList= document.getElementsByTagName("device");
 
-        for (int i = 0 ;i<nodeList.getLength();i++){
+        NodeList nodeList = document.getElementsByTagName("device");
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
 
             device = Device.builder().id(Integer.parseInt(node.getAttributes().item(0).getNodeValue())).build();
@@ -53,22 +52,21 @@ public class DomParser {
                 //get j type
                 Element type = (Element) types.item(j);
                 //get subtype of type
-                Node subType =  type.getFirstChild().getNextSibling();
+                Node subType = type.getFirstChild().getNextSibling();
 
-
-                switch (subType.getNodeName()){
+                switch (subType.getNodeName()) {
                     case "group":
                     case "port":
                         typeArrayList.add(new Type(subType.getTextContent().trim()));
                         break;
                     case "power":
-                        typeArrayList.add(new PowerType("power",Integer.parseInt(subType.getTextContent().trim())));
+                        typeArrayList.add(new PowerType("power", Integer.parseInt(subType.getTextContent().trim())));
                         break;
                     case "fan":
-                        typeArrayList.add(new FanType("power",Boolean.parseBoolean(subType.getTextContent().trim())));
+                        typeArrayList.add(new FanType("power", Boolean.parseBoolean(subType.getTextContent().trim())));
                         break;
                     case "peripheral":
-                        typeArrayList.add(new FanType("peripheral",Boolean.parseBoolean(subType.getTextContent().trim())));
+                        typeArrayList.add(new FanType("peripheral", Boolean.parseBoolean(subType.getTextContent().trim())));
                         break;
                     default:
                         break;
@@ -78,8 +76,6 @@ public class DomParser {
 
             devices.add(device);
         }
-
-
 
 
         return devices;
