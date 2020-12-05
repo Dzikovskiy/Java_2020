@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <devices>
-    <device id="5">
-        <name>gtx570</name>
-        <origin>USA</origin>
-        <price>100</price>
+    <device id="1">
+        <name>gtx1070</name>
+        <origin>Belarus</origin>
+        <price>150</price>
         <critical>true</critical>
-        <manufacture-date>2002-09-24</manufacture-date>
+        <manufacture-date>2022-09-24</manufacture-date>
         <type>
             <group>
                 IO

@@ -20,6 +20,7 @@ public class MenuView {
     SaxParser saxParser = new SaxParser();
     StaxParser staxParser = new StaxParser();
     ArrayList<Device> devices = new ArrayList<>();
+    DevicePrinter printer = new DevicePrinter();
 
     public void menu() {
         while (true) {
@@ -60,7 +61,7 @@ public class MenuView {
                     System.out.println("Xml has been parsed with STAX correctly");
                     break;
                 case 5:
-                    devices.forEach(System.out::println);
+                    printer.printDevices(devices);
                     break;
                 case 6:
                     return;
