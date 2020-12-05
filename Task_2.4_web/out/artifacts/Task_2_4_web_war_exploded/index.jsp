@@ -13,11 +13,26 @@ Select a file to upload: <br/>
     <br/>
     <input type="submit" value="Upload File"/>
 </form>
+
+
+<form action="DomServlet" method="post">
+    <input type="submit" value="dom parser" />
+</form>
+
+
+<form action="SaxServlet" method="post">
+    <input type="submit" value="sax parser"/>
+</form>
+
+<form action="StaxServlet" method="post">
+    <input type="submit" value="stax parser"/>
+</form>
+
+
 <% String msg = (String) request.getAttribute("message");
-    if (msg!=null) {
+    if (msg != null) {
         out.println(msg);
     }
-
 %>
 </body>
 </html>

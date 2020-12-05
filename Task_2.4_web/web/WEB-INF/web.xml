@@ -12,4 +12,30 @@
         <servlet-name>UploadServlet</servlet-name>
         <url-pattern>/UploadServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DomServlet</servlet-name>
+        <servlet-class>by.training.task2_4.controller.DomServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DomServlet</servlet-name>
+        <url-pattern>/DomServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SaxServlet</servlet-name>
+        <servlet-class>by.training.task2_4.controller.SaxServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaxServlet</servlet-name>
+        <url-pattern>/SaxServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>StaxServlet</servlet-name>
+        <servlet-class>by.training.task2_4.controller.StaxServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StaxServlet</servlet-name>
+        <url-pattern>/StaxServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
