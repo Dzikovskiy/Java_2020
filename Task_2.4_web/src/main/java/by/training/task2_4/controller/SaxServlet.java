@@ -22,6 +22,7 @@ public class SaxServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DevicesBean.setDevices((ArrayList<Device>) saxParser.parseDevices(DevicesBean.getXmlPath()));
         request.setAttribute("message", "Sax parsed");
+        request.setAttribute("devices", DevicesBean.getDevices());
 
         logger.debug("Devices parsed with sax");
 

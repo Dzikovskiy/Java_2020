@@ -23,6 +23,7 @@ public class StaxServlet  extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DevicesBean.setDevices((ArrayList<Device>) staxParser.parseDevices(DevicesBean.getXmlPath()));
         request.setAttribute("message", "Stax parsed");
+        request.setAttribute("devices", DevicesBean.getDevices());
 
         logger.debug("Devices parsed with stax");
 

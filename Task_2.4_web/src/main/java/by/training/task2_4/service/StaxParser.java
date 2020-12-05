@@ -31,6 +31,7 @@ public class StaxParser {
             XMLEventReader eventReader =
                     factory.createXMLEventReader(new FileReader(xmlPath));
             logger.debug("Xml loaded: "+xmlPath);
+            devices = new ArrayList<>();
 
             while (eventReader.hasNext()) {
                 XMLEvent event = eventReader.nextEvent();

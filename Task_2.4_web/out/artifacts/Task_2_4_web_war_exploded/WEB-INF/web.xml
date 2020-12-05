@@ -38,4 +38,12 @@
         <servlet-name>StaxServlet</servlet-name>
         <url-pattern>/StaxServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>VerifyServlet</servlet-name>
+        <servlet-class>by.training.task2_4.controller.VerifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerifyServlet</servlet-name>
+        <url-pattern>/VerifyServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

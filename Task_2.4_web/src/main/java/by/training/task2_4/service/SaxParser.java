@@ -22,6 +22,7 @@ public class SaxParser {
 
     public List<Device> parseDevices(String xmlPath) {
         try {
+            devices = new ArrayList<>();
             File inputFile = new File(xmlPath);
             logger.debug("Xml loaded: "+xmlPath);
             SAXParserFactory factory = SAXParserFactory.newInstance();
