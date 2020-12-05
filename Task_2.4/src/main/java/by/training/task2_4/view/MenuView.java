@@ -3,6 +3,7 @@ package by.training.task2_4.view;
 import by.training.task2_4.entity.Device;
 import by.training.task2_4.service.DomParser;
 import by.training.task2_4.service.SaxParser;
+import by.training.task2_4.service.StaxParser;
 import by.training.task2_4.service.XMLValidator;
 import org.xml.sax.SAXException;
 
@@ -17,6 +18,7 @@ public class MenuView {
     private final String XSDPath = "src/main/resources/devices.xsd";
     DomParser domParser = new DomParser();
     SaxParser saxParser = new SaxParser();
+    StaxParser staxParser = new StaxParser();
     ArrayList<Device> devices = new ArrayList<>();
 
     public void menu() {
@@ -54,7 +56,8 @@ public class MenuView {
                     System.out.println("Xml has been parsed with SAX correctly");
                     break;
                 case 4:
-
+                    devices = (ArrayList<Device>) staxParser.parseDevices(XMLPath);
+                    System.out.println("Xml has been parsed with STAX correctly");
                     break;
                 case 5:
                     devices.forEach(System.out::println);

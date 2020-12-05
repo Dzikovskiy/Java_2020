@@ -12,10 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SaxParser {
-    ArrayList<Device> devices = new ArrayList<>();
-    ArrayList<Type> types = new ArrayList<>();
-    Device device;
-    Type type;
+    private ArrayList<Device> devices = new ArrayList<>();
+    private ArrayList<Type> types = new ArrayList<>();
+    private Device device;
+    private Type type;
 
     public List<Device> parseDevices(String xmlPath) {
         try {

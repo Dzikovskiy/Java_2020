@@ -21,3 +21,5 @@ h
 8src/main/java/by/training/task2_4/service/DomParser.java,1\f\1f6dc3cb33c9b0ab5b8ce2e2ee4211a7aeffc0c7
 [
 +src/main/java/by/training/task2_4/Main.java,d\8\d8f5576f2c5227c6412f2782a36cd2807313f8f8
+d
+4src/main/java/by/training/task2_4/view/MenuView.java,d\4\d4cfb42d17f0f31b63e1ad5ebc8bb7a29f94ef9e
