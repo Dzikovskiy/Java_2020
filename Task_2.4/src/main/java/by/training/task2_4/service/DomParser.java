@@ -4,6 +4,8 @@ import by.training.task2_4.entity.Device;
 import by.training.task2_4.entity.FanType;
 import by.training.task2_4.entity.PowerType;
 import by.training.task2_4.entity.Type;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -19,6 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DomParser {
+    private static Logger logger = LogManager.getLogger();
+
     public List<Device> parseDevices(String xmlPath) throws ParserConfigurationException, IOException, SAXException {
         ArrayList<Device> devices = new ArrayList<>();
         Device device;
@@ -28,12 +32,13 @@ public class DomParser {
         DocumentBuilder builder = factory.newDocumentBuilder();
 
         Document document = builder.parse(new File(xmlPath));
-
+        logger.debug("Xml loaded: "+xmlPath);
 
         NodeList nodeList = document.getElementsByTagName("device");
 
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
+            logger.debug("Device " +i+" parsing started");
 
             device = Device.builder().id(Integer.parseInt(node.getAttributes().item(0).getNodeValue())).build();
 
@@ -75,6 +80,7 @@ public class DomParser {
             device.setTypes(typeArrayList);
 
             devices.add(device);
+            logger.debug("Device " +i+" parsed successfully");
         }
 
 

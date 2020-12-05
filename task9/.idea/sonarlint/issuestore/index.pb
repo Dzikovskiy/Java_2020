@@ -1,8 +1,6 @@
 
 i
 9src/main/java/by/training/task9/entity/BaseCharacter.java,c\6\c6de76f08c04aaaa31635b40ed2d352d68c20fe1
-L
-src/main/resources/input.txt,4\5\4500b27ab100f4be3b96a57909340e2706b80bb6
 X
 (src/main/java/by/training/task9/App.java,9\3\93150bb8a12071e2b77ef31b0a4c63c3e48bd659
 m

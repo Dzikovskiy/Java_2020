@@ -1,6 +1,8 @@
 package by.training.task2_4.service;
 
 import by.training.task2_4.entity.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -12,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SaxParser {
+    private static Logger logger = LogManager.getLogger();
     private ArrayList<Device> devices = new ArrayList<>();
     private ArrayList<Type> types = new ArrayList<>();
     private Device device;
@@ -20,6 +23,7 @@ public class SaxParser {
     public List<Device> parseDevices(String xmlPath) {
         try {
             File inputFile = new File(xmlPath);
+            logger.debug("Xml loaded: "+xmlPath);
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
             AdvancedXMLHandler xmlHandler = new AdvancedXMLHandler();
@@ -38,9 +42,9 @@ public class SaxParser {
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
             if (qName.equalsIgnoreCase("device")) {
+                logger.debug("Device parsing started");
                 types = new ArrayList<>();
                 device = Device.builder().id(Integer.parseInt(attributes.getValue("id"))).types(types).build();
-
             }
             if (qName.equalsIgnoreCase("name")) {
                 bName = true;
@@ -131,6 +135,7 @@ public class SaxParser {
         public void endElement(String uri, String localName, String qName) throws SAXException {
             if (qName.equalsIgnoreCase("device")) {
                 devices.add(device);
+                logger.debug("Device parsed successfully");
             }
         }
     }

@@ -1,6 +1,8 @@
 package by.training.task2_4.service;
 
 import by.training.task2_4.entity.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
@@ -14,6 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class StaxParser {
+    private static Logger logger = LogManager.getLogger();
     private ArrayList<Device> devices = new ArrayList<>();
     private ArrayList<Type> types = new ArrayList<>();
     private Device device;
@@ -27,6 +30,7 @@ public class StaxParser {
             XMLInputFactory factory = XMLInputFactory.newInstance();
             XMLEventReader eventReader =
                     factory.createXMLEventReader(new FileReader(xmlPath));
+            logger.debug("Xml loaded: "+xmlPath);
 
             while (eventReader.hasNext()) {
                 XMLEvent event = eventReader.nextEvent();
@@ -39,6 +43,7 @@ public class StaxParser {
                         String qName = startElement.getName().getLocalPart();
 
                         if (qName.equalsIgnoreCase("device")) {
+                            logger.debug("Device parsing started");
                             types = new ArrayList<>();
 
                             Iterator<Attribute> attributes = startElement.getAttributes();
@@ -133,6 +138,7 @@ public class StaxParser {
 
                         if (endElement.getName().getLocalPart().equalsIgnoreCase("device")) {
                             devices.add(device);
+                            logger.debug("Device parsed successfully");
                         }
                         break;
                 }
