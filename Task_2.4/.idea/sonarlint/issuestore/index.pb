@@ -23,3 +23,5 @@ h
 +src/main/java/by/training/task2_4/Main.java,d\8\d8f5576f2c5227c6412f2782a36cd2807313f8f8
 d
 4src/main/java/by/training/task2_4/view/MenuView.java,d\4\d4cfb42d17f0f31b63e1ad5ebc8bb7a29f94ef9e
+i
+9src/main/java/by/training/task2_4/view/DevicePrinter.java,0\d\0d216b4e0133b79e7816f9b1153748b8880a45a8

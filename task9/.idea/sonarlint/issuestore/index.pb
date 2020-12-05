@@ -11,3 +11,11 @@ g
 7src/main/java/by/training/task9/service/TextParser.java,8\4\8453ff698887fdf79f99a18e5e23738b1d6ba4f2
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+l
+<src/main/java/by/training/task9/service/CharacterParser.java,4\a\4a3158d1dfb77eabccfbe2dec626414fb925374a
+i
+9src/main/java/by/training/task9/service/LexemeParser.java,7\1\711f0718f4e0fa08f474f57f5e196cc7bdae3ab0
+l
+<src/main/java/by/training/task9/service/ParagraphParser.java,0\5\05d4a255634012b9af91f6bec92cbdc564391d7c
+k
+;src/main/java/by/training/task9/service/SentenceParser.java,5\6\569c590f56d668b5d4c7b8efd8f4d40acc3c44e3

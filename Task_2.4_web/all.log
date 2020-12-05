@@ -1,0 +1,19 @@
+2020-12-05 17:29:43.693 [main] INFO  by.training.task2_4.Main - Program start
+2020-12-05 17:36:22.025 [main] INFO  by.training.task2_4.Main - Program start
+2020-12-05 17:36:23.952 [main] DEBUG by.training.task2_4.service.XMLValidator - Schema loaded
+2020-12-05 17:36:23.958 [main] DEBUG by.training.task2_4.service.XMLValidator - XML verified
+2020-12-05 17:36:30.201 [main] DEBUG by.training.task2_4.service.DomParser - Xml loaded: src/main/resources/devices.xml
+2020-12-05 17:36:30.202 [main] DEBUG by.training.task2_4.service.DomParser - Device 0 parsing started
+2020-12-05 17:36:30.203 [main] DEBUG by.training.task2_4.service.DomParser - Device 0 parsed successfully
+2020-12-05 17:36:30.203 [main] DEBUG by.training.task2_4.service.DomParser - Device 1 parsing started
+2020-12-05 17:36:30.204 [main] DEBUG by.training.task2_4.service.DomParser - Device 1 parsed successfully
+2020-12-05 17:36:37.611 [main] DEBUG by.training.task2_4.service.SaxParser - Xml loaded: src/main/resources/devices.xml
+2020-12-05 17:36:37.614 [main] DEBUG by.training.task2_4.service.SaxParser - Device parsing started
+2020-12-05 17:36:37.615 [main] DEBUG by.training.task2_4.service.SaxParser - Device parsed successfully
+2020-12-05 17:36:37.615 [main] DEBUG by.training.task2_4.service.SaxParser - Device parsing started
+2020-12-05 17:36:37.615 [main] DEBUG by.training.task2_4.service.SaxParser - Device parsed successfully
+2020-12-05 17:36:39.889 [main] DEBUG by.training.task2_4.service.StaxParser - Xml loaded: src/main/resources/devices.xml
+2020-12-05 17:36:39.890 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsing started
+2020-12-05 17:36:39.891 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsed successfully
+2020-12-05 17:36:39.891 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsing started
+2020-12-05 17:36:39.892 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsed successfully

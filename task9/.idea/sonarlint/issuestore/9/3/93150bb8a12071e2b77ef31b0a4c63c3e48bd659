@@ -1,5 +1,5 @@
 
-t
-java:S1192"[Define a constant instead of duplicating this literal "    Hello hell hel he h.\n" 3 times.(œæ¾Âýÿÿÿÿ
-O	java:S125"<This block of commented-out lines of code should be removed.(Þ®Í¼
-Q	java:S106"9Replace this use of System.out or System.err by a logger.(ˆÿÀƒùÿÿÿÿ
+v
+java:S1192*"[Define a constant instead of duplicating this literal "    Hello hell hel he h.\n" 3 times.(œæ¾Âýÿÿÿÿ
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(ˆÿÀƒùÿÿÿÿ
+Q	java:S1250"<This block of commented-out lines of code should be removed.(Þ®Í¼
