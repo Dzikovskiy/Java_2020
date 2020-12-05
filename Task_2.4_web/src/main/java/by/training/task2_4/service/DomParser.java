@@ -1,9 +1,6 @@
 package by.training.task2_4.service;
 
-import by.training.task2_4.entity.Device;
-import by.training.task2_4.entity.FanType;
-import by.training.task2_4.entity.PowerType;
-import by.training.task2_4.entity.Type;
+import by.training.task2_4.entity.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -68,10 +65,10 @@ public class DomParser {
                         typeArrayList.add(new PowerType("power", Integer.parseInt(subType.getTextContent().trim())));
                         break;
                     case "fan":
-                        typeArrayList.add(new FanType("power", Boolean.parseBoolean(subType.getTextContent().trim())));
+                        typeArrayList.add(new FanType("fan", Boolean.parseBoolean(subType.getTextContent().trim())));
                         break;
                     case "peripheral":
-                        typeArrayList.add(new FanType("peripheral", Boolean.parseBoolean(subType.getTextContent().trim())));
+                        typeArrayList.add(new PeripheralType("peripheral", Boolean.parseBoolean(subType.getTextContent().trim())));
                         break;
                     default:
                         break;
