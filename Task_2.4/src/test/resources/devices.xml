@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+    <device id="1">
+        <name>gtx1070</name>
+        <origin>Belarus</origin>
+        <price>150</price>
+        <critical>true</critical>
+        <manufacture-date>2022-09-24</manufacture-date>
+        <type>
+            <group>
+                IO
+            </group>
+        </type>
+        <type>
+            <port>COM</port>
+        </type>
+        <type>
+            <port>USB</port>
+        </type>
+        <type>
+            <power>500</power>
+        </type>
+        <type>
+            <fan>true</fan>
+        </type>
+        <type>
+            <peripheral>false</peripheral>
+        </type>
+
+    </device>
+    <device id="2">
+        <name>gtx570</name>
+        <origin>USA</origin>
+        <price>100</price>
+        <critical>true</critical>
+        <manufacture-date>2002-09-24</manufacture-date>
+        <type>
+            <group>MULTIMEDIA</group>
+        </type>
+        <type>
+            <port>COM</port>
+        </type>
+        <type>
+            <port>USB</port>
+        </type>
+        <type>
+            <power>5020</power>
+        </type>
+        <type>
+            <fan>true</fan>
+        </type>
+        <type>
+            <peripheral>false</peripheral>
+        </type>
+
+    </device>
+</devices>

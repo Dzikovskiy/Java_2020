@@ -17,3 +17,20 @@
 2020-12-05 17:36:39.891 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsed successfully
 2020-12-05 17:36:39.891 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsing started
 2020-12-05 17:36:39.892 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsed successfully
+2020-12-06 15:58:09.287 [main] DEBUG by.training.task2_4.service.DomParser - Xml loaded: src/test/resources/devices.xml
+2020-12-06 15:58:09.289 [main] DEBUG by.training.task2_4.service.DomParser - Device 0 parsing started
+2020-12-06 15:58:09.291 [main] DEBUG by.training.task2_4.service.DomParser - Device 0 parsed successfully
+2020-12-06 15:58:09.291 [main] DEBUG by.training.task2_4.service.DomParser - Device 1 parsing started
+2020-12-06 15:58:09.291 [main] DEBUG by.training.task2_4.service.DomParser - Device 1 parsed successfully
+2020-12-06 15:58:09.297 [main] DEBUG by.training.task2_4.service.SaxParser - Xml loaded: src/test/resources/devices.xml
+2020-12-06 15:58:09.299 [main] DEBUG by.training.task2_4.service.SaxParser - Device parsing started
+2020-12-06 15:58:09.299 [main] DEBUG by.training.task2_4.service.SaxParser - Device parsed successfully
+2020-12-06 15:58:09.299 [main] DEBUG by.training.task2_4.service.SaxParser - Device parsing started
+2020-12-06 15:58:09.300 [main] DEBUG by.training.task2_4.service.SaxParser - Device parsed successfully
+2020-12-06 15:58:09.335 [main] DEBUG by.training.task2_4.service.XMLValidator - Schema loaded
+2020-12-06 15:58:09.348 [main] DEBUG by.training.task2_4.service.XMLValidator - XML verified
+2020-12-06 15:58:09.355 [main] DEBUG by.training.task2_4.service.StaxParser - Xml loaded: src/test/resources/devices.xml
+2020-12-06 15:58:09.356 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsing started
+2020-12-06 15:58:09.356 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsed successfully
+2020-12-06 15:58:09.357 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsing started
+2020-12-06 15:58:09.357 [main] DEBUG by.training.task2_4.service.StaxParser - Device parsed successfully

@@ -1,0 +1,59 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="devices">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="device" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="nonEmptyString" name="name" />
+                            <xs:element type="nonEmptyString" name="origin"/>
+                            <xs:element name="price" default="0">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="0"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element type="xs:boolean" name="critical"/>
+                            <xs:element type="xs:date" name="manufacture-date"/>
+                            <xs:element name="type" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="group" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:token">
+                                                    <xs:enumeration value="IO"/>
+                                                    <xs:enumeration value="MULTIMEDIA"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="port" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:token">
+                                                    <xs:enumeration value="USB"/>
+                                                    <xs:enumeration value="COM"/>
+                                                    <xs:enumeration value="LPT"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element type="xs:integer" name="power" minOccurs="0"/>
+                                        <xs:element type="xs:boolean" name="fan" minOccurs="0"/>
+                                        <xs:element type="xs:boolean" name="peripheral" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:integer" name="id" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+    <xs:simpleType name="nonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
